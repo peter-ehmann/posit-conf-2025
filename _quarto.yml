@@ -1,0 +1,22 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: "POSIT::CONF(2025)"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+
+format:
+  html:
+    theme: zephyr
+    toc: true
+    toc_depth: 3
+    toc_float: true
+    toc_smooth_scroll: true
+    toc_highlight: true
+    fig-align: center
+    
+editor: source
