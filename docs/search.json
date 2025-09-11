@@ -4,6 +4,6 @@
     "href": "index.html",
     "title": "POSIT::CONF(2025)",
     "section": "",
-    "text": "This website is under development."
+    "text": "We attended the Posit Conference in Atlanta, GA representing Regeneron Pharmaceuticals.\nThis is a website organizing all the code and topics from the sessions we attended.\n\n\n\nSession\nDay\nTime\nAttendee\n\n\n\n\nR in Pharma Summit\nMonday, Sept 15\n9am-5pm\nPeter & Nick\n\n\nggplot2 Workshop\nTuesday, Sept 16\n9am-5pm\nPeter\n\n\nNick’s Workshop\nTuesday, Sept 16\n9am-5pm\nNick\n\n\nPlaceholder\nWednesday, Sept 17\n\n\n\n\nPlaceholder\nThursday, Sept 18\n\n\n\n\n\ntest &lt;- \"Hello World\"\nprint(test)\n[1] “Hello World”"
   }
 ]

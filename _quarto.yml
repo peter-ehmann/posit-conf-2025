@@ -11,12 +11,25 @@ website:
 
 format:
   html:
-    theme: zephyr
     toc: true
-    toc_depth: 3
-    toc_float: true
-    toc_smooth_scroll: true
-    toc_highlight: true
-    fig-align: center
+    toc-location: left
+    toc-expand: true
+    toc-depth: 4
+    number-sections: true
+    number-depth: 4
+    embed-resources: true
+    code-background: true
+    theme: zephyr
+    grid:
+      sidebar-width: 200px
+      body-width: 1200px
+      margin-width: 200px
+      gutter-width: 1.5rem
+
+execute:
+  echo: true
+  message: false
+  warning: false
+  output: asis
 
 editor: source
