@@ -1,22 +1,29 @@
 ---
 title: "POSIT::CONF(2025)"
 author: "Peter Ehmann & Nick Giangreco"
-date: "2025-09-12"
+date: "2025-09-15"
 ---
 
-We attended the [Posit Conference](https://posit.co/conference/) in Atlanta, GA representing [Regeneron Pharmaceuticals](https://www.regeneron.com/).
+We attended the [Posit Conference](https://posit.co/conference/) in Atlanta, GA.
 
-This is a website organizing all the code and topics from the sessions we attended.
+This is a website organizing all the topics and notes from the sessions we attended.
+
+### Sessions
 
 | Session | Day | Time | Attendee |
-|------------------|------------------|------------------|------------------|
+|-----------------------------|-------------------|-----------|------------|
 | [R in Pharma Summit](https://posit.co/blog/register-for-r-pharma-at-posit-conf-2025/#r-pharma-summit) | Monday, Sept 15 | 9am-5pm | Peter & Nick |
-| [ggplot2 Workshop](https://posit-conf-2025.github.io/ggplot2/) | Tuesday, Sept 16 | 9am-5pm | Peter |
-| Nick's Workshop | Tuesday, Sept 16 | 9am-5pm | Nick |
+| Pharmaverse for Regulatory Submissions | Tuesday, Sept 16 | 9am-5pm | Peter |
+| Programming with LLM APIs | Tuesday, Sept 16 | 9am-5pm | Nick |
 | Placeholder | Wednesday, Sept 17 |  |  |
 | Placeholder | Thursday, Sept 18 |  |  |
 
-```{r}
-test <- "Hello World"
-print(test)
-```
+### Events
+
+| Session                           | Day                | Time | Attendee     |
+|-----------------------------------|--------------------|------|--------------|
+| rPharma meetup at SKOL Brewery    | Sunday, Sept 14    | 7pm  | Peter & Nick |
+| rPharma social event at White Oak | Monday, Sept 15    | 6pm  | Peter & Nick |
+| Georgia Aquarium                  | Wednesday, Sept 17 | 7pm  | Peter & Nick |
+|                                   |                    |      |              |
+|                                   |                    |      |              |

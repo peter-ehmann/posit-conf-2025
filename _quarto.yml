@@ -6,8 +6,10 @@ website:
   title: "POSIT::CONF(2025)"
   navbar:
     left:
-      - href: index.qmd
-        text: Home
+      - text: Home
+        href: index.qmd
+      - text: R in Pharma
+        href: rPharma.qmd
 
 format:
   html:
@@ -15,7 +17,7 @@ format:
     toc-location: left
     toc-expand: true
     toc-depth: 4
-    number-sections: true
+    number-sections: false
     number-depth: 4
     embed-resources: true
     code-background: true
