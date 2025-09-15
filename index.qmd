@@ -2,6 +2,13 @@
 title: "POSIT::CONF(2025)"
 author: "Peter Ehmann & Nick Giangreco"
 date: "2025-09-15"
+format:
+  html:
+    grid:
+      sidebar-width: 200px
+      body-width: 1200px
+      margin-width: 200px
+      gutter-width: 1.5rem
 ---
 
 We attended the [Posit Conference](https://posit.co/conference/) in Atlanta, GA.
@@ -12,7 +19,7 @@ This is a website organizing all the topics and notes from the sessions we atten
 
 | Session | Day | Time | Attendee |
 |-----------------------------|-------------------|-----------|------------|
-| [R in Pharma Summit](https://posit.co/blog/register-for-r-pharma-at-posit-conf-2025/#r-pharma-summit) | Monday, Sept 15 | 9am-5pm | Peter & Nick |
+| [R/Pharma Summit](https://posit.co/blog/register-for-r-pharma-at-posit-conf-2025/#r-pharma-summit) | Monday, Sept 15 | 9am-5pm | Peter & Nick |
 | Pharmaverse for Regulatory Submissions | Tuesday, Sept 16 | 9am-5pm | Peter |
 | Programming with LLM APIs | Tuesday, Sept 16 | 9am-5pm | Nick |
 | Placeholder | Wednesday, Sept 17 |  |  |

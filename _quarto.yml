@@ -8,7 +8,7 @@ website:
     left:
       - text: Home
         href: index.qmd
-      - text: R in Pharma
+      - text: R/Pharma Summit
         href: rPharma.qmd
 
 format:
@@ -23,9 +23,9 @@ format:
     code-background: true
     theme: zephyr
     grid:
-      sidebar-width: 200px
+      sidebar-width: 350px
       body-width: 1200px
-      margin-width: 200px
+      margin-width: 50px
       gutter-width: 1.5rem
 
 execute:

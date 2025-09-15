@@ -1,12 +1,12 @@
 ---
-title: "rPharma"
+title: "R/Pharma Summit"
 ---
 
 ### About
 
   - Organizer: Phil Bowsher
   - Attendance: 100+ people
-  - Link: https://rinpharma.github.io/rinpharma-summit-2025/
+  - Link: [https://rinpharma.github.io/rinpharma-summit-2025/](https://rinpharma.github.io/rinpharma-summit-2025/)
 
 #### REGN Attendees
 
@@ -62,8 +62,8 @@ title: "rPharma"
 
 #### Links
 
-https://rpodcast.quarto.pub/quality-rphsummit2025/#/titleslide
-https://rstats.wtf/
+[https://rpodcast.quarto.pub/quality-rphsummit2025/#/titleslide](https://rpodcast.quarto.pub/quality-rphsummit2025/#/titleslide)
+[https://rstats.wtf/](https://rstats.wtf/)
 
 #### What is quality
 
@@ -112,4 +112,9 @@ standards throughout pharmaceutical manufacturing.
   - Provide:
     - precise instructions
     - supply the right information at the right time
-  - 
+
+#### Tool Calls
+
+#### Model, Context, Protocol (MCP)
+
+
