@@ -4,21 +4,26 @@ title: "R/Pharma Summit"
 
 ### About
 
-  - Organizer: Phil Bowsher
-  - Attendance: 100+ people
+  - Organizers:
+    - Phil Bowsher (Posit)
+    - James Black (Roche)
+    - Harvey Lieberman (Novartis)
+    - Katie Igartua (Tempus)
+  - Attendance: 100+ people from pharma, biotech, and CRO/contractors
   - Link: [https://rinpharma.github.io/rinpharma-summit-2025/](https://rinpharma.github.io/rinpharma-summit-2025/)
+  - Sponser: [Open Source in Pharma](https://opensourceinpharma.com/)
 
 #### REGN Attendees
 
-  - Peter Ehmann
-  - Nick Giangreco
-  - Ryan Yu
-  - Sri Pavan
+  - Peter Ehmann (PMQTS)
+  - Nick Giangreco (PMQTS)
+  - Ryan Yu (BDM)
+  - Sri Pavan Vemuri (BDM)
 
 #### Atorus
 
-  - Steve
-  - Ashley
+  - Steve Nicholas
+  - Ashley Tarasiewicz
 
 ### ROI in Open Source
 
@@ -62,8 +67,8 @@ title: "R/Pharma Summit"
 
 #### Links
 
-[https://rpodcast.quarto.pub/quality-rphsummit2025/#/titleslide](https://rpodcast.quarto.pub/quality-rphsummit2025/#/titleslide)
-[https://rstats.wtf/](https://rstats.wtf/)
+  - [https://rpodcast.quarto.pub/quality-rphsummit2025/#/titleslide](https://rpodcast.quarto.pub/quality-rphsummit2025/#/titleslide)
+  - [https://rstats.wtf/](https://rstats.wtf/)
 
 #### What is quality
 
@@ -112,9 +117,57 @@ standards throughout pharmaceutical manufacturing.
   - Provide:
     - precise instructions
     - supply the right information at the right time
+  - Tool Calls
+  - Model, Context, Protocol (MCP)
+  - evals are critical for testing and development
+  - we can't test everything, and LLMs will screw up
+    - adopt version control (oversight)
+  - create ways to find errors
+  - Current state: do not make plans before piloting 
+    - play with current tools
+    - do not plan to put things in production in 2025
+    - figure out what it is good at, vs not good at
+  - Use cases:
+    - mostly documentation
+    - nobody mentioned as junior analyst (@Natalie)
+  - Build foundation to be ready when the models improve
+  - Is it doing what it's meant to do?
+    - Give it to high performers
+    - If it fails, it will get shut down early.
+  
+#### Comprehensive C-QT Analysis From Data to Deliverables
 
-#### Tool Calls
+[https://a2-ai.github.io/cqtkit-docs/versions/1.0.2/](https://a2-ai.github.io/cqtkit-docs/versions/1.0.2/)
 
-#### Model, Context, Protocol (MCP)
+### GenAI in Positron
 
+  - Polyglot IDE - R, Python, SQL, Rust, Julia, 
+  - Fork of VS Code
+  - Claude integration into Positron
+    - knows all environment variables
+  
+### Validation Hub
 
+  - R consortium project
+  - 10 organizations
+  - Involvement from health authorities
+
+### Roundtable 1 - Perspectives of CROs
+
+  - Denali
+  - Cytel
+  - Atorus
+  - Syneos
+  
+**Takeaway:** Need to have time for learning & leveling up to enable open-source adoption.
+  
+### Roundtable 2 - Open-Source Change Manangement
+
+  - GSK
+  - Genentech/Roche
+  
+**Takeaway:** Trainings are ineffective, need to implement best practices in everyday work.
+
+  - GSK uses ["just in time training"](https://en.wikipedia.org/wiki/Just-in-time_learning)
+  - Advanced programmer is teamed with novice programmer to implement best practices in a real-world setting
+  - Coders will only adopt change if they have to
