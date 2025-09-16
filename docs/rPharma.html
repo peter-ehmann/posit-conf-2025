@@ -4773,9 +4773,12 @@ vertical-align: -.125em;
   <li><a href="#genai-and-clinical-trials" id="toc-genai-and-clinical-trials" class="nav-link" data-scroll-target="#genai-and-clinical-trials">GenAI and Clinical Trials</a>
   <ul>
   <li><a href="#llms" id="toc-llms" class="nav-link" data-scroll-target="#llms">LLMs</a></li>
-  <li><a href="#tool-calls" id="toc-tool-calls" class="nav-link" data-scroll-target="#tool-calls">Tool Calls</a></li>
-  <li><a href="#model-context-protocol-mcp" id="toc-model-context-protocol-mcp" class="nav-link" data-scroll-target="#model-context-protocol-mcp">Model, Context, Protocol (MCP)</a></li>
+  <li><a href="#comprehensive-c-qt-analysis-from-data-to-deliverables" id="toc-comprehensive-c-qt-analysis-from-data-to-deliverables" class="nav-link" data-scroll-target="#comprehensive-c-qt-analysis-from-data-to-deliverables">Comprehensive C-QT Analysis From Data to Deliverables</a></li>
   </ul></li>
+  <li><a href="#genai-in-positron" id="toc-genai-in-positron" class="nav-link" data-scroll-target="#genai-in-positron">GenAI in Positron</a></li>
+  <li><a href="#validation-hub" id="toc-validation-hub" class="nav-link" data-scroll-target="#validation-hub">Validation Hub</a></li>
+  <li><a href="#roundtable-1---perspectives-of-cros" id="toc-roundtable-1---perspectives-of-cros" class="nav-link" data-scroll-target="#roundtable-1---perspectives-of-cros">Roundtable 1 - Perspectives of CROs</a></li>
+  <li><a href="#roundtable-2---open-source-change-manangement" id="toc-roundtable-2---open-source-change-manangement" class="nav-link" data-scroll-target="#roundtable-2---open-source-change-manangement">Roundtable 2 - Open-Source Change Manangement</a></li>
   </ul>
 </nav>
 </nav>
@@ -4808,24 +4811,31 @@ vertical-align: -.125em;
 <section id="about" class="level3">
 <h3 class="anchored" data-anchor-id="about">About</h3>
 <ul>
-<li>Organizer: Phil Bowsher</li>
-<li>Attendance: 100+ people</li>
+<li>Organizers:
+<ul>
+<li>Phil Bowsher (Posit)</li>
+<li>James Black (Roche)</li>
+<li>Harvey Lieberman (Novartis)</li>
+<li>Katie Igartua (Tempus)</li>
+</ul></li>
+<li>Attendance: 100+ people from pharma, biotech, and CRO/contractors</li>
 <li>Link: <a href="https://rinpharma.github.io/rinpharma-summit-2025/">https://rinpharma.github.io/rinpharma-summit-2025/</a></li>
+<li>Sponser: <a href="https://opensourceinpharma.com/">Open Source in Pharma</a></li>
 </ul>
 <section id="regn-attendees" class="level4">
 <h4 class="anchored" data-anchor-id="regn-attendees">REGN Attendees</h4>
 <ul>
-<li>Peter Ehmann</li>
-<li>Nick Giangreco</li>
-<li>Ryan Yu</li>
-<li>Sri Pavan</li>
+<li>Peter Ehmann (PMQTS)</li>
+<li>Nick Giangreco (PMQTS)</li>
+<li>Ryan Yu (BDM)</li>
+<li>Sri Pavan Vemuri (BDM)</li>
 </ul>
 </section>
 <section id="atorus" class="level4">
 <h4 class="anchored" data-anchor-id="atorus">Atorus</h4>
 <ul>
-<li>Steve</li>
-<li>Ashley</li>
+<li>Steve Nicholas</li>
+<li>Ashley Tarasiewicz</li>
 </ul>
 </section>
 </section>
@@ -4886,7 +4896,10 @@ vertical-align: -.125em;
 <h3 class="anchored" data-anchor-id="quality-in-open-source">Quality in Open-Source</h3>
 <section id="links" class="level4">
 <h4 class="anchored" data-anchor-id="links">Links</h4>
-<p><a href="https://rpodcast.quarto.pub/quality-rphsummit2025/#/titleslide">https://rpodcast.quarto.pub/quality-rphsummit2025/#/titleslide</a> <a href="https://rstats.wtf/">https://rstats.wtf/</a></p>
+<ul>
+<li><a href="https://rpodcast.quarto.pub/quality-rphsummit2025/#/titleslide">https://rpodcast.quarto.pub/quality-rphsummit2025/#/titleslide</a></li>
+<li><a href="https://rstats.wtf/">https://rstats.wtf/</a></li>
+</ul>
 </section>
 <section id="what-is-quality" class="level4">
 <h4 class="anchored" data-anchor-id="what-is-quality">What is quality</h4>
@@ -4947,16 +4960,81 @@ vertical-align: -.125em;
 <li>precise instructions</li>
 <li>supply the right information at the right time</li>
 </ul></li>
+<li>Tool Calls</li>
+<li>Model, Context, Protocol (MCP)</li>
+<li>evals are critical for testing and development</li>
+<li>we can’t test everything, and LLMs will screw up
+<ul>
+<li>adopt version control (oversight)</li>
+</ul></li>
+<li>create ways to find errors</li>
+<li>Current state: do not make plans before piloting
+<ul>
+<li>play with current tools</li>
+<li>do not plan to put things in production in 2025</li>
+<li>figure out what it is good at, vs not good at</li>
+</ul></li>
+<li>Use cases:
+<ul>
+<li>mostly documentation</li>
+<li>nobody mentioned as junior analyst (<span class="citation" data-cites="Natalie">@Natalie</span>)</li>
+</ul></li>
+<li>Build foundation to be ready when the models improve</li>
+<li>Is it doing what it’s meant to do?
+<ul>
+<li>Give it to high performers</li>
+<li>If it fails, it will get shut down early.</li>
+</ul></li>
 </ul>
 </section>
-<section id="tool-calls" class="level4">
-<h4 class="anchored" data-anchor-id="tool-calls">Tool Calls</h4>
+<section id="comprehensive-c-qt-analysis-from-data-to-deliverables" class="level4">
+<h4 class="anchored" data-anchor-id="comprehensive-c-qt-analysis-from-data-to-deliverables">Comprehensive C-QT Analysis From Data to Deliverables</h4>
+<p><a href="https://a2-ai.github.io/cqtkit-docs/versions/1.0.2/">https://a2-ai.github.io/cqtkit-docs/versions/1.0.2/</a></p>
 </section>
-<section id="model-context-protocol-mcp" class="level4">
-<h4 class="anchored" data-anchor-id="model-context-protocol-mcp">Model, Context, Protocol (MCP)</h4>
+</section>
+<section id="genai-in-positron" class="level3">
+<h3 class="anchored" data-anchor-id="genai-in-positron">GenAI in Positron</h3>
+<ul>
+<li>Polyglot IDE - R, Python, SQL, Rust, Julia,</li>
+<li>Fork of VS Code</li>
+<li>Claude integration into Positron
+<ul>
+<li>knows all environment variables</li>
+</ul></li>
+</ul>
+</section>
+<section id="validation-hub" class="level3">
+<h3 class="anchored" data-anchor-id="validation-hub">Validation Hub</h3>
+<ul>
+<li>R consortium project</li>
+<li>10 organizations</li>
+<li>Involvement from health authorities</li>
+</ul>
+</section>
+<section id="roundtable-1---perspectives-of-cros" class="level3">
+<h3 class="anchored" data-anchor-id="roundtable-1---perspectives-of-cros">Roundtable 1 - Perspectives of CROs</h3>
+<ul>
+<li>Denali</li>
+<li>Cytel</li>
+<li>Atorus</li>
+<li>Syneos</li>
+</ul>
+<p><strong>Takeaway:</strong> Need to have time for learning &amp; leveling up to enable open-source adoption.</p>
+</section>
+<section id="roundtable-2---open-source-change-manangement" class="level3">
+<h3 class="anchored" data-anchor-id="roundtable-2---open-source-change-manangement">Roundtable 2 - Open-Source Change Manangement</h3>
+<ul>
+<li>GSK</li>
+<li>Genentech/Roche</li>
+</ul>
+<p><strong>Takeaway:</strong> Trainings are ineffective, need to implement best practices in everyday work.</p>
+<ul>
+<li>GSK uses <a href="https://en.wikipedia.org/wiki/Just-in-time_learning">“just in time training”</a></li>
+<li>Advanced programmer is teamed with novice programmer to implement best practices in a real-world setting</li>
+<li>Coders will only adopt change if they have to</li>
+</ul>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->
