@@ -2,9 +2,9 @@
 title: "End-to-End Submissions in R with the Pharmaverse"
 ---
 
-```{r}
-library(admiral)
-```
+### Pharmaverse Examples
+
+[Resource with example datasets](https://pharmaverse.github.io/examples/)
 
 ### Introduction
 
@@ -196,3 +196,255 @@ ae <- ae %>%
 ```
 
 ### ADaM
+
+#### ADSL - Subject Level Data
+
+  - Each subject has 1 row/record
+  
+#### ADVS - Vital Signs dataset
+
+  - ADVS is a basic data structure
+  - focus is on records, not variables
+
+  1. Apply info from Specs
+  2. Derive vars and records
+  3. Prepare dataset for submissions
+  
+#### Exercise 3
+
+```{r}
+# Exercise 1
+# Update date and time imputation arguments so that any dates or times
+# that are imputed are the last month/day of the year and 23:59:59
+
+library(tibble)
+library(lubridate)
+library(admiral)
+
+posit_mh <- tribble(
+  ~USUBJID, ~MHSTDTC,
+  1,        "2019-07-18T15:25:40",
+  1,        "2019-07-18T15:25",
+  1,        "2019-07-18",
+  2,        "2024-02",
+  2,        "2019",
+  2,        "2019---07",
+  3,        ""
+)
+
+paste0("Problem 1")
+
+knitr::kable(
+  derive_vars_dtm(
+    dataset = posit_mh,
+    new_vars_prefix = "AST",
+    dtc = MHSTDTC,
+    highest_imputation = "M",
+    date_imputation = "last",
+    time_imputation = "last"
+  )
+)
+
+# Exercise 2
+# Update set_values_to argument for the formula
+# MAP Formula: MAP = (SYSBP + 2*DIABP) / 3
+
+ADVS <- tribble(
+  ~USUBJID,      ~PARAMCD, ~PARAM,                            ~AVALU,  ~AVAL, ~VISIT,
+  "01-701-1015", "DIABP",  "Diastolic Blood Pressure (mmHg)", "mmHg",    51, "BASELINE",
+  "01-701-1015", "SYSBP",  "Systolic Blood Pressure (mmHg)",  "mmHg",   121, "BASELINE",
+  "01-701-1028", "DIABP",  "Diastolic Blood Pressure (mmHg)", "mmHg",    79, "BASELINE",
+  "01-701-1028", "SYSBP",  "Systolic Blood Pressure (mmHg)",  "mmHg",   130, "BASELINE",
+) 
+
+paste0("Problem 2")
+
+knitr::kable(
+  derive_param_computed(
+    ADVS,
+    by_vars = exprs(USUBJID, VISIT),
+    parameters = c("SYSBP", "DIABP"),
+    set_values_to = exprs(
+      AVAL = (AVAL.SYSBP + 2 * AVAL.DIABP) / 3,
+      PARAMCD = "MAP",
+      PARAM = "Mean Arterial Pressure (mmHg)",
+      AVALU = "mmHg",
+    )
+  )
+)
+```
+
+### ARDs - Analysis Results Datasets
+
+  - tabulate and summarise Cat and Cont vars
+  - `cards` does summary stats
+  - `cardx` does statistical analysis
+  
+#### Exercise 4
+
+```{r}
+# ARD Exercise: Adverse Events summaries using {cards}
+
+
+# Setup: run this first! --------------------------------------------------
+
+# Load necessary packages
+library(cards)
+
+# Import & subset data
+adsl <- pharmaverseadam::adsl |> 
+  dplyr::filter(SAFFL=="Y")
+
+adae <- pharmaverseadam::adae |> 
+  dplyr::filter(SAFFL=="Y") |> 
+  dplyr::filter(AESOC %in% unique(AESOC)[1:3]) |> 
+  dplyr::group_by(AESOC) |> 
+  dplyr::filter(AEDECOD %in% unique(AEDECOD)[1:3]) |> 
+  dplyr::ungroup()
+
+# Exercise ----------------------------------------------------------------
+
+# A. Calculate the number and percentage of *unique* subjects with at least one AE:
+#  - By each SOC (AESOC)
+#  - By each Preferred term (AEDECOD) within SOC (AESOC)
+# By every combination of treatment group (ARM) 
+
+ard_stack_hierarchical(
+  data = adae,
+  variables = c(AESOC,AEDECOD),
+  by = ARM, 
+  id = USUBJID,
+  denominator = adsl
+) 
+
+# B. [*BONUS*] Modify the code from part A to include overall number/percentage of
+# subjects with at least one AE, regardless of SOC and PT
+
+ard_stack_hierarchical(
+  data = adae,
+  variables = c(AESOC, AEDECOD),
+  by = ARM, 
+  id = USUBJID,
+  denominator = adsl,
+  over_variables = TRUE
+) 
+```
+
+### tfrmt - Nicely formatting ARDs
+
+```{r eval=FALSE}
+# Table Exercise: AE summary table using {tfrmt}
+
+# For this exercise, we will use the AE ARD from the last section to
+# create a {tfrmt} table
+
+
+# Setup: run this first! --------------------------------------------------
+
+## Load necessary packages
+library(cards)
+library(dplyr)
+library(tidyr)
+library(tfrmt)
+
+## Import & subset data
+adsl <- pharmaverseadam::adsl |> 
+  dplyr::filter(SAFFL=="Y")
+
+adae <- pharmaverseadam::adae |> 
+  dplyr::filter(SAFFL=="Y") |> 
+  dplyr::filter(AESOC %in% unique(AESOC)[1:3]) |> 
+  dplyr::group_by(AESOC) |> 
+  dplyr::filter(AEDECOD %in% unique(AEDECOD)[1:3]) |> 
+  dplyr::ungroup()
+
+## Create AE Summary using cards
+ard_ae <- ard_stack_hierarchical(
+  data = adae,
+  variables = c(AESOC, AEDECOD),
+  by = ARM, 
+  id = USUBJID,
+  denominator = adsl,
+  over_variables = TRUE,
+  statistic = ~ c("n", "p")
+) 
+
+
+# Exercise ----------------------------------------------------------------
+
+# A. Convert `cards` object into a tidy data frame ready for {tfrmt}. 
+#    Nothing to do besides run each step & explore the output!
+
+ard_ae_tidy <- ard_ae |> 
+  shuffle_card(fill_hierarchical_overall = "ANY EVENT") |> 
+  prep_big_n(vars = "ARM") |> 
+  prep_hierarchical_fill(vars = c("AESOC","AEDECOD"),
+                         fill_from_left = TRUE) |> 
+  dplyr::select(-c(context, stat_label, stat_variable)) 
+
+
+# B. Create a basic tfrmt, filling in the missing variable names
+
+ae_tfrmt <- tfrmt(
+  group = AESOC,
+  label = AEDECOD,
+  param = , # fill
+  value = , # fill
+  column = , # fill
+  body_plan = body_plan(
+    frmt_structure(group_val = ".default", label_val = ".default", 
+                   frmt_combine(
+                     "{n} ({p}%)",
+                     n = frmt("xx"),
+                     p = frmt("xx", transform = ~ . *100)
+                   )
+    )
+  ),
+  big_n = big_n_structure(param_val = "bigN") 
+) 
+
+print_to_gt(ae_tfrmt,
+            ard_ae_tidy)
+
+
+# C. Switch the order of the columns so Placebo is last
+
+ae_tfrmt <- ae_tfrmt |> 
+  tfrmt(
+    col_plan = col_plan(
+      "Placebo",
+      starts_with("Xanomeline")
+    )
+  )  
+
+print_to_gt(ae_tfrmt, ard_ae_tidy)
+
+
+# D. Add a title and source note for the table
+
+ae_tfrmt <- ae_tfrmt |> 
+  tfrmt(
+    title = "", # fill
+    footnote_plan = footnote_plan(
+      footnote_structure("") # fill with footnote text
+    ) 
+  )
+
+print_to_gt(ae_tfrmt, ard_ae_tidy)
+```
+
+### gtsummary - more tables
+
+  - How to adopt `gtsummary` at your company
+  - Large user base, catch edge cases
+  
+### teal - helps build shinys
+
+[https://insightsengineering.github.io/teal/latest-tag/](https://insightsengineering.github.io/teal/latest-tag/)
+
+### How to contribute
+
+  1. use the package
+  2. write a blog or create a template
+  3. submit issues on git
+  4. join as a contributor
