@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>R/Pharma Summit – POSIT::CONF(2025)</title>
+<title>End-to-End Submissions in R with the Pharmaverse – POSIT::CONF(2025)</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -18,6 +18,40 @@ ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
 width: 0.8em;
 margin: 0 0.8em 0.2em -1em;  vertical-align: middle;
+}
+
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+{ counter-reset: source-line 0; }
+pre.numberSource code > span
+{ position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+{ content: counter(source-line);
+position: relative; left: -1em; text-align: right; vertical-align: baseline;
+border: none; display: inline-block;
+-webkit-touch-callout: none; -webkit-user-select: none;
+-khtml-user-select: none; -moz-user-select: none;
+-ms-user-select: none; user-select: none;
+padding: 0 4px; width: 4em;
+}
+pre.numberSource { margin-left: 3em; padding-left: 4px; }
+div.sourceCode
+{ }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -4733,11 +4767,11 @@ vertical-align: -.125em;
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./rPharma.html" aria-current="page"> 
+    <a class="nav-link" href="./rPharma.html"> 
 <span class="menu-text">R/Pharma Summit</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./pharmaverse.html"> 
+    <a class="nav-link active" href="./pharmaverse.html" aria-current="page"> 
 <span class="menu-text">Pharmaverse</span></a>
   </li>  
 </ul>
@@ -4755,34 +4789,24 @@ vertical-align: -.125em;
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#about" id="toc-about" class="nav-link active" data-scroll-target="#about">About</a>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a>
   <ul>
-  <li><a href="#regn-attendees" id="toc-regn-attendees" class="nav-link" data-scroll-target="#regn-attendees">REGN Attendees</a></li>
-  <li><a href="#atorus" id="toc-atorus" class="nav-link" data-scroll-target="#atorus">Atorus</a></li>
+  <li><a href="#instructors" id="toc-instructors" class="nav-link" data-scroll-target="#instructors">Instructors</a></li>
+  <li><a href="#what-is-this-workshop" id="toc-what-is-this-workshop" class="nav-link" data-scroll-target="#what-is-this-workshop">What is this workshop</a></li>
+  <li><a href="#end-to-end" id="toc-end-to-end" class="nav-link" data-scroll-target="#end-to-end">End-to-End</a></li>
+  <li><a href="#exercise-1" id="toc-exercise-1" class="nav-link" data-scroll-target="#exercise-1">Exercise 1</a></li>
   </ul></li>
-  <li><a href="#roi-in-open-source" id="toc-roi-in-open-source" class="nav-link" data-scroll-target="#roi-in-open-source">ROI in Open Source</a>
+  <li><a href="#sdtm-mapping" id="toc-sdtm-mapping" class="nav-link" data-scroll-target="#sdtm-mapping">SDTM Mapping</a>
   <ul>
-  <li><a href="#why-use-open-source" id="toc-why-use-open-source" class="nav-link" data-scroll-target="#why-use-open-source">Why use open-source?</a></li>
-  <li><a href="#what-is-the-roi" id="toc-what-is-the-roi" class="nav-link" data-scroll-target="#what-is-the-roi">What is the ROI?</a></li>
-  <li><a href="#who-do-we-need-to-influence" id="toc-who-do-we-need-to-influence" class="nav-link" data-scroll-target="#who-do-we-need-to-influence">Who do we need to influence?</a></li>
-  <li><a href="#what-to-demystify" id="toc-what-to-demystify" class="nav-link" data-scroll-target="#what-to-demystify">What to demystify?</a></li>
+  <li><a href="#sdtm" id="toc-sdtm" class="nav-link" data-scroll-target="#sdtm">SDTM</a></li>
+  <li><a href="#sdtm.oak-package" id="toc-sdtm.oak-package" class="nav-link" data-scroll-target="#sdtm.oak-package">sdtm.oak package</a></li>
+  <li><a href="#algorithms" id="toc-algorithms" class="nav-link" data-scroll-target="#algorithms">Algorithms</a></li>
+  <li><a href="#compared-to-dplyr" id="toc-compared-to-dplyr" class="nav-link" data-scroll-target="#compared-to-dplyr">Compared to dplyr</a></li>
+  <li><a href="#topic-variables" id="toc-topic-variables" class="nav-link" data-scroll-target="#topic-variables">Topic Variables</a></li>
+  <li><a href="#edc-domains" id="toc-edc-domains" class="nav-link" data-scroll-target="#edc-domains">EDC Domains</a></li>
+  <li><a href="#example-raw---sdtm-mapping" id="toc-example-raw---sdtm-mapping" class="nav-link" data-scroll-target="#example-raw---sdtm-mapping">Example Raw -&gt; SDTM mapping</a></li>
   </ul></li>
-  <li><a href="#quality-in-open-source" id="toc-quality-in-open-source" class="nav-link" data-scroll-target="#quality-in-open-source">Quality in Open-Source</a>
-  <ul>
-  <li><a href="#links" id="toc-links" class="nav-link" data-scroll-target="#links">Links</a></li>
-  <li><a href="#what-is-quality" id="toc-what-is-quality" class="nav-link" data-scroll-target="#what-is-quality">What is quality</a></li>
-  <li><a href="#benefits-of-open-source" id="toc-benefits-of-open-source" class="nav-link" data-scroll-target="#benefits-of-open-source">Benefits of open-source</a></li>
-  <li><a href="#why-open-source" id="toc-why-open-source" class="nav-link" data-scroll-target="#why-open-source">Why open-source</a></li>
-  </ul></li>
-  <li><a href="#genai-and-clinical-trials" id="toc-genai-and-clinical-trials" class="nav-link" data-scroll-target="#genai-and-clinical-trials">GenAI and Clinical Trials</a>
-  <ul>
-  <li><a href="#llms" id="toc-llms" class="nav-link" data-scroll-target="#llms">LLMs</a></li>
-  <li><a href="#comprehensive-c-qt-analysis-from-data-to-deliverables" id="toc-comprehensive-c-qt-analysis-from-data-to-deliverables" class="nav-link" data-scroll-target="#comprehensive-c-qt-analysis-from-data-to-deliverables">Comprehensive C-QT Analysis From Data to Deliverables</a></li>
-  </ul></li>
-  <li><a href="#genai-in-positron" id="toc-genai-in-positron" class="nav-link" data-scroll-target="#genai-in-positron">GenAI in Positron</a></li>
-  <li><a href="#validation-hub" id="toc-validation-hub" class="nav-link" data-scroll-target="#validation-hub">Validation Hub</a></li>
-  <li><a href="#roundtable-1---perspectives-of-cros" id="toc-roundtable-1---perspectives-of-cros" class="nav-link" data-scroll-target="#roundtable-1---perspectives-of-cros">Roundtable 1 - Perspectives of CROs</a></li>
-  <li><a href="#roundtable-2---open-source-change-manangement" id="toc-roundtable-2---open-source-change-manangement" class="nav-link" data-scroll-target="#roundtable-2---open-source-change-manangement">Roundtable 2 - Open-Source Change Manangement</a></li>
+  <li><a href="#adam" id="toc-adam" class="nav-link" data-scroll-target="#adam">ADaM</a></li>
   </ul>
 </nav>
 </nav>
@@ -4795,7 +4819,7 @@ vertical-align: -.125em;
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">R/Pharma Summit</h1>
+<h1 class="title">End-to-End Submissions in R with the Pharmaverse</h1>
 </div>
 
 
@@ -4812,231 +4836,288 @@ vertical-align: -.125em;
 </header>
 
 
-<section id="about" class="level3">
-<h3 class="anchored" data-anchor-id="about">About</h3>
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(admiral)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<section id="introduction" class="level3">
+<h3 class="anchored" data-anchor-id="introduction">Introduction</h3>
+<p><a href="https://posit-conf-2025.github.io/pharmaverse/slides/01-intro/#/title-slide">Slides</a></p>
+<section id="instructors" class="level4">
+<h4 class="anchored" data-anchor-id="instructors">Instructors</h4>
 <ul>
-<li>Organizers:
-<ul>
-<li>Phil Bowsher (Posit)</li>
-<li>James Black (Roche)</li>
-<li>Harvey Lieberman (Novartis)</li>
-<li>Katie Igartua (Tempus)</li>
-</ul></li>
-<li>Attendance: 100+ people from pharma, biotech, and CRO/contractors</li>
-<li>Link: <a href="https://rinpharma.github.io/rinpharma-summit-2025/">https://rinpharma.github.io/rinpharma-summit-2025/</a></li>
-<li>Sponser: <a href="https://opensourceinpharma.com/">Open Source in Pharma</a></li>
-</ul>
-<section id="regn-attendees" class="level4">
-<h4 class="anchored" data-anchor-id="regn-attendees">REGN Attendees</h4>
-<ul>
-<li>Peter Ehmann (PMQTS)</li>
-<li>Nick Giangreco (PMQTS)</li>
-<li>Ryan Yu (BDM)</li>
-<li>Sri Pavan Vemuri (BDM)</li>
+<li>Daniel Sjoberg (MSK -&gt; Roche/Genentech)</li>
+<li>Becca Krouse (GSK)</li>
+<li>Ben Straub (GSK)</li>
+<li>Ram Ganapathy (Syneos -&gt; Roche/Genentech)</li>
 </ul>
 </section>
-<section id="atorus" class="level4">
-<h4 class="anchored" data-anchor-id="atorus">Atorus</h4>
+<section id="what-is-this-workshop" class="level4">
+<h4 class="anchored" data-anchor-id="what-is-this-workshop">What is this workshop</h4>
 <ul>
-<li>Steve Nicholas</li>
-<li>Ashley Tarasiewicz</li>
+<li><p>Get data into CDISC standards (ADaM and SDTM domains)</p></li>
+<li><p><a href="https://pharmaverse.org/">Pharmaverse</a></p></li>
+<li><p>Align pharma industry on a standard process</p></li>
+<li><p>Data collection to submission</p></li>
+<li><p>R packages to support Clinical Reporting in R</p></li>
+<li><p>Create SDTM from raw data (CDASH and non-CDASH formats)</p></li>
+<li><p>Create ADaM datasets from SDTM</p></li>
+<li><p>Multiple ways to create tables</p></li>
 </ul>
 </section>
+<section id="end-to-end" class="level4">
+<h4 class="anchored" data-anchor-id="end-to-end">End-to-End</h4>
+<ol type="1">
+<li>pharmaverse raw</li>
+<li>pharmaverse SDTM</li>
+<li>pharmaverse ADaM</li>
+</ol>
 </section>
-<section id="roi-in-open-source" class="level3">
-<h3 class="anchored" data-anchor-id="roi-in-open-source">ROI in Open Source</h3>
-<section id="why-use-open-source" class="level4">
-<h4 class="anchored" data-anchor-id="why-use-open-source">Why use open-source?</h4>
+<section id="exercise-1" class="level4">
+<h4 class="anchored" data-anchor-id="exercise-1">Exercise 1</h4>
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Let&#39;s warm-up!</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(pharmaverseadam)</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Using dplyr:</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="co">#  - From the ADSL dataset:</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="co">#   - Subset to the safety population (SAFFL == &quot;Y&quot;)</span></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="co">#   - calculate the number of unique subjects in each treatment group (TRT01A)  </span></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a><span class="co"># View(pharmaverseadam::adsl)</span></span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">kable</span>(</span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>  pharmaverseadam<span class="sc">::</span>adsl <span class="sc">|&gt;</span> </span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>    dplyr<span class="sc">::</span><span class="fu">filter</span>(SAFFL <span class="sc">==</span> <span class="st">&quot;Y&quot;</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>    dplyr<span class="sc">::</span><span class="fu">group_by</span>(TRT01A) <span class="sc">|&gt;</span></span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>    dplyr<span class="sc">::</span><span class="fu">summarise</span>(<span class="at">n =</span> dplyr<span class="sc">::</span><span class="fu">n_distinct</span>(SUBJID))</span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: left;">TRT01A</th>
+<th style="text-align: right;">n</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Placebo</td>
+<td style="text-align: right;">86</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Xanomeline High Dose</td>
+<td style="text-align: right;">72</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Xanomeline Low Dose</td>
+<td style="text-align: right;">96</td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="sdtm-mapping" class="level3">
+<h3 class="anchored" data-anchor-id="sdtm-mapping">SDTM Mapping</h3>
+<p><a href="https://posit-conf-2025.github.io/pharmaverse/slides/02-SDTM/#/title-slide">Slides</a></p>
+<section id="sdtm" class="level4">
+<h4 class="anchored" data-anchor-id="sdtm">SDTM</h4>
+<p><strong>Study Data Tabulation Model</strong></p>
 <ul>
-<li>collaboration, faster innovation</li>
-<li>not just R, but python</li>
-<li>opens up talent pool</li>
-<li>not spending time training to learn SAS</li>
-<li>what are students coding in grad school</li>
+<li>Mapping raw data to standards</li>
+<li>raw (EDC) to SDTM is difficult</li>
+<li>SDTM across companies is standard</li>
+<li>SDTM -&gt; ADaM is easy</li>
 </ul>
 </section>
-<section id="what-is-the-roi" class="level4">
-<h4 class="anchored" data-anchor-id="what-is-the-roi">What is the ROI?</h4>
+<section id="sdtm.oak-package" class="level4">
+<h4 class="anchored" data-anchor-id="sdtm.oak-package">sdtm.oak package</h4>
 <ul>
-<li>difficult to measure</li>
-<li>prove it with POC</li>
-<li>tipping point (financial cost)
-<ul>
-<li>propriety vs.</li>
-<li>open-source</li>
-</ul></li>
-<li>experiment SAS vs. R timing to program SDTM tables
-<ul>
-<li>automation</li>
-<li>customization</li>
-<li>final product</li>
-</ul></li>
-<li>not just cost, but mindset shift</li>
-<li>PMQTS - analagous to shift from siloed coding to best practices
-<ul>
-<li>savings are not apparent up-front</li>
-<li>ROI is difficult to calculate and communicate</li>
-<li>POC and reach tipping point</li>
-</ul></li>
+<li>Accommodates varying raw data structures from different EDC systems and vendors</li>
 </ul>
 </section>
-<section id="who-do-we-need-to-influence" class="level4">
-<h4 class="anchored" data-anchor-id="who-do-we-need-to-influence">Who do we need to influence?</h4>
+<section id="algorithms" class="level4">
+<h4 class="anchored" data-anchor-id="algorithms">Algorithms</h4>
 <ul>
-<li>health authorities</li>
-<li>business IT</li>
+<li>variables with similar mapping algorithms are grouped together</li>
+<li>16,000 vars can be grouped into 22 groups</li>
+<li>algorithms are backbone of oak</li>
+</ul>
+<p><code>assign_no_ct()</code> -&gt; no controlled terminology</p>
+<p><code>assign_ct()</code> -&gt; 1:1 mapping with controlled terminology</p>
+<p><code>assign_datetime()</code> -&gt; ISO8601 format</p>
+<p><code>hardcode_ct()</code> -&gt; text on EDC (eg units)</p>
+</section>
+<section id="compared-to-dplyr" class="level4">
+<h4 class="anchored" data-anchor-id="compared-to-dplyr">Compared to dplyr</h4>
+<ul>
+<li>do not have to write <code>case_when</code> statements</li>
 </ul>
 </section>
-<section id="what-to-demystify" class="level4">
-<h4 class="anchored" data-anchor-id="what-to-demystify">What to demystify?</h4>
+<section id="topic-variables" class="level4">
+<h4 class="anchored" data-anchor-id="topic-variables">Topic Variables</h4>
+<ol type="1">
+<li>Identifier (ID of record)</li>
+<li>Qualifier (what is the variable)</li>
+<li>Timing (when was variable collected)</li>
+</ol>
+</section>
+<section id="edc-domains" class="level4">
+<h4 class="anchored" data-anchor-id="edc-domains">EDC Domains</h4>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th><strong>EDC Domain</strong></th>
+<th><strong>Code</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Demographics</td>
+<td>DM</td>
+</tr>
+<tr class="even">
+<td>Medical History</td>
+<td>MH</td>
+</tr>
+<tr class="odd">
+<td>Adverse Events</td>
+<td>AE</td>
+</tr>
+<tr class="even">
+<td>Concomitant Medications</td>
+<td>CM</td>
+</tr>
+<tr class="odd">
+<td>Laboratory Results</td>
+<td>LB</td>
+</tr>
+<tr class="even">
+<td>Vital Signs</td>
+<td>VS</td>
+</tr>
+<tr class="odd">
+<td>Physical Examination</td>
+<td>PE</td>
+</tr>
+<tr class="even">
+<td>Study Drug Administration</td>
+<td>DA</td>
+</tr>
+<tr class="odd">
+<td>Subject Disposition</td>
+<td>DS</td>
+</tr>
+<tr class="even">
+<td>Efficacy Assessments</td>
+<td>EF</td>
+</tr>
+<tr class="odd">
+<td>Safety Assessments</td>
+<td>SA</td>
+</tr>
+<tr class="even">
+<td>Questionnaires</td>
+<td>QS</td>
+</tr>
+<tr class="odd">
+<td>Imaging Assessments</td>
+<td>IMG</td>
+</tr>
+<tr class="even">
+<td>Randomization</td>
+<td>RAND</td>
+</tr>
+<tr class="odd">
+<td>Protocol Deviations</td>
+<td>PD</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="example-raw---sdtm-mapping" class="level4">
+<h4 class="anchored" data-anchor-id="example-raw---sdtm-mapping">Example Raw -&gt; SDTM mapping</h4>
+<p><a href="https://github.com/posit-conf-2025/pharmaverse/tree/main/slides/02-SDTM/scripts">Code</a></p>
 <ul>
-<li>validation</li>
-<li>reproducibility</li>
-<li>open-source</li>
+<li>vs Domain example</li>
+<li>dm domain example</li>
 </ul>
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(sdtm.oak)</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(pharmaverseraw)</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="co"># AE aCRF - https://github.com/pharmaverse/pharmaverseraw/blob/main/vignettes/articles/aCRFs/AdverseEvent_aCRF.pdf</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Read in Raw dataset ----</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>ae_raw <span class="ot">&lt;-</span> pharmaverseraw<span class="sc">::</span>ae_raw</span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Generate oak_id_vars ----</span></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>ae_raw <span class="ot">&lt;-</span> ae_raw <span class="sc">%&gt;%</span></span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">generate_oak_id_vars</span>(</span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>    <span class="at">pat_var =</span> <span class="st">&quot;PATNUM&quot;</span>,</span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>    <span class="at">raw_src =</span> <span class="st">&quot;ae_raw&quot;</span></span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a><span class="co"># Read in Controlled Terminology</span></span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a>study_ct <span class="ot">&lt;-</span>  <span class="fu">data.frame</span>(</span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a>  <span class="at">codelist_code =</span> <span class="fu">c</span>(<span class="st">&quot;C66742&quot;</span>, <span class="st">&quot;C66742&quot;</span>),</span>
+<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a>  <span class="at">term_code =</span> <span class="fu">c</span>(<span class="st">&quot;C49487&quot;</span>, <span class="st">&quot;C49488&quot;</span>),</span>
+<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a>  <span class="at">term_value =</span> <span class="fu">c</span>(<span class="st">&quot;N&quot;</span>, <span class="st">&quot;Y&quot;</span>),</span>
+<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a>  <span class="at">collected_value =</span> <span class="fu">c</span>(<span class="st">&quot;No&quot;</span>, <span class="st">&quot;Yes&quot;</span>),</span>
+<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a>  <span class="at">term_preferred_term =</span> <span class="fu">c</span>(<span class="st">&quot;No&quot;</span>, <span class="st">&quot;Yes&quot;</span>),</span>
+<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a>  <span class="at">term_synonyms =</span> <span class="fu">c</span>(<span class="st">&quot;No&quot;</span>, <span class="st">&quot;Yes&quot;</span>),</span>
+<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a>  <span class="at">stringsAsFactors =</span> <span class="cn">FALSE</span></span>
+<span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb3-27"><a href="#cb3-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-28"><a href="#cb3-28" aria-hidden="true" tabindex="-1"></a><span class="co"># Exercise 1 ------------------------------------------------</span></span>
+<span id="cb3-29"><a href="#cb3-29" aria-hidden="true" tabindex="-1"></a><span class="co"># Map AETERM from raw_var=IT.AETERM, tgt_var=AETERM</span></span>
+<span id="cb3-30"><a href="#cb3-30" aria-hidden="true" tabindex="-1"></a>ae <span class="ot">&lt;-</span></span>
+<span id="cb3-31"><a href="#cb3-31" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Derive topic variable</span></span>
+<span id="cb3-32"><a href="#cb3-32" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Map AETERM using assign_no_ct</span></span>
+<span id="cb3-33"><a href="#cb3-33" aria-hidden="true" tabindex="-1"></a>  <span class="fu">assign_no_ct</span>(</span>
+<span id="cb3-34"><a href="#cb3-34" aria-hidden="true" tabindex="-1"></a>    <span class="at">raw_dat =</span> ae_raw,</span>
+<span id="cb3-35"><a href="#cb3-35" aria-hidden="true" tabindex="-1"></a>    <span class="at">raw_var =</span> <span class="st">&quot;IT.AETERM&quot;</span>,</span>
+<span id="cb3-36"><a href="#cb3-36" aria-hidden="true" tabindex="-1"></a>    <span class="at">tgt_var =</span> <span class="st">&quot;AETERM&quot;</span>,</span>
+<span id="cb3-37"><a href="#cb3-37" aria-hidden="true" tabindex="-1"></a>    <span class="at">id_vars =</span> <span class="fu">oak_id_vars</span>()</span>
+<span id="cb3-38"><a href="#cb3-38" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb3-39"><a href="#cb3-39" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-40"><a href="#cb3-40" aria-hidden="true" tabindex="-1"></a><span class="co"># Exercise 2 ------------------------------------------------</span></span>
+<span id="cb3-41"><a href="#cb3-41" aria-hidden="true" tabindex="-1"></a><span class="co"># Map AESER from raw_var=IT.AESER, tgt_var=AESER. Codelist code for AESDTH is C66742</span></span>
+<span id="cb3-42"><a href="#cb3-42" aria-hidden="true" tabindex="-1"></a>ae <span class="ot">&lt;-</span> ae <span class="sc">%&gt;%</span></span>
+<span id="cb3-43"><a href="#cb3-43" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Map AESER using ??</span></span>
+<span id="cb3-44"><a href="#cb3-44" aria-hidden="true" tabindex="-1"></a>  <span class="fu">assign_ct</span>(</span>
+<span id="cb3-45"><a href="#cb3-45" aria-hidden="true" tabindex="-1"></a>    <span class="at">raw_dat =</span> ae_raw,</span>
+<span id="cb3-46"><a href="#cb3-46" aria-hidden="true" tabindex="-1"></a>    <span class="at">raw_var =</span> <span class="st">&quot;IT.AESER&quot;</span>,</span>
+<span id="cb3-47"><a href="#cb3-47" aria-hidden="true" tabindex="-1"></a>    <span class="at">tgt_var =</span> <span class="st">&quot;AESER&quot;</span>,</span>
+<span id="cb3-48"><a href="#cb3-48" aria-hidden="true" tabindex="-1"></a>    <span class="at">ct_spec =</span> study_ct,</span>
+<span id="cb3-49"><a href="#cb3-49" aria-hidden="true" tabindex="-1"></a>    <span class="at">ct_clst =</span> <span class="st">&quot;C66742&quot;</span>,</span>
+<span id="cb3-50"><a href="#cb3-50" aria-hidden="true" tabindex="-1"></a>    <span class="at">id_vars =</span> <span class="fu">oak_id_vars</span>()</span>
+<span id="cb3-51"><a href="#cb3-51" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb3-52"><a href="#cb3-52" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-53"><a href="#cb3-53" aria-hidden="true" tabindex="-1"></a><span class="co"># Exercise 3 ------------------------------------------------</span></span>
+<span id="cb3-54"><a href="#cb3-54" aria-hidden="true" tabindex="-1"></a><span class="co"># Map AESDTH from raw_var=IT.AESDTH, tgt_var=AESDTH. Annotation text is </span></span>
+<span id="cb3-55"><a href="#cb3-55" aria-hidden="true" tabindex="-1"></a><span class="co"># If &quot;Yes&quot; then AESDTH = &quot;Y&quot; else Not Submitted. Codelist code for AESDTH is C66742</span></span>
+<span id="cb3-56"><a href="#cb3-56" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-57"><a href="#cb3-57" aria-hidden="true" tabindex="-1"></a>ae <span class="ot">&lt;-</span> ae <span class="sc">%&gt;%</span></span>
+<span id="cb3-58"><a href="#cb3-58" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Map AESDTH using condition_add &amp; assign_ct, raw_var=IT.AESDTH, tgt_var=AESDTH</span></span>
+<span id="cb3-59"><a href="#cb3-59" aria-hidden="true" tabindex="-1"></a>  <span class="fu">assign_ct</span>(</span>
+<span id="cb3-60"><a href="#cb3-60" aria-hidden="true" tabindex="-1"></a>    <span class="at">raw_dat =</span> <span class="fu">condition_add</span>(ae_raw, IT.AESDTH <span class="sc">==</span> <span class="st">&quot;Yes&quot;</span>),</span>
+<span id="cb3-61"><a href="#cb3-61" aria-hidden="true" tabindex="-1"></a>    <span class="at">raw_var =</span> <span class="st">&quot;IT.AESDTH&quot;</span>,</span>
+<span id="cb3-62"><a href="#cb3-62" aria-hidden="true" tabindex="-1"></a>    <span class="at">tgt_var =</span> <span class="st">&quot;AESDTH&quot;</span>,</span>
+<span id="cb3-63"><a href="#cb3-63" aria-hidden="true" tabindex="-1"></a>    <span class="at">ct_spec =</span> study_ct,</span>
+<span id="cb3-64"><a href="#cb3-64" aria-hidden="true" tabindex="-1"></a>    <span class="at">ct_clst =</span> <span class="st">&quot;C66742&quot;</span>,</span>
+<span id="cb3-65"><a href="#cb3-65" aria-hidden="true" tabindex="-1"></a>    <span class="at">id_vars =</span> <span class="fu">oak_id_vars</span>()</span>
+<span id="cb3-66"><a href="#cb3-66" aria-hidden="true" tabindex="-1"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 </section>
 </section>
-<section id="quality-in-open-source" class="level3">
-<h3 class="anchored" data-anchor-id="quality-in-open-source">Quality in Open-Source</h3>
-<section id="links" class="level4">
-<h4 class="anchored" data-anchor-id="links">Links</h4>
-<ul>
-<li><a href="https://rpodcast.quarto.pub/quality-rphsummit2025/#/titleslide">https://rpodcast.quarto.pub/quality-rphsummit2025/#/titleslide</a></li>
-<li><a href="https://rstats.wtf/">https://rstats.wtf/</a></li>
-</ul>
-</section>
-<section id="what-is-quality" class="level4">
-<h4 class="anchored" data-anchor-id="what-is-quality">What is quality</h4>
-<p>Quality Assurance (QA) and Quality Control (QC) are two distinct but interconnected components crucial to ensuring pharmaceutical products’ safety, efficacy, and reliability. QA and QC in the pharmaceutical industry collectively form a comprehensive framework for maintaining high-quality standards throughout pharmaceutical manufacturing.</p>
-</section>
-<section id="benefits-of-open-source" class="level4">
-<h4 class="anchored" data-anchor-id="benefits-of-open-source">Benefits of open-source</h4>
-<ul>
-<li>TFL generation</li>
-<li>Multi use tools: shiny, packages (don’t have to start from skratch)</li>
-<li>Data repository</li>
-</ul>
-</section>
-<section id="why-open-source" class="level4">
-<h4 class="anchored" data-anchor-id="why-open-source">Why open-source</h4>
-<ul>
-<li>User facing vs. Quality facing documentation (know your audience)</li>
-<li>User -&gt; see underlying code and flag issues</li>
-<li>Quality -&gt; should know author(s) and tests performed (maintenance strategy)</li>
-<li>Maintenance
-<ul>
-<li>project re-assinged</li>
-<li>employee leaves (turnover)</li>
-<li>phase out</li>
-<li>GIT!!! - learning curve is steep (barrier to entry)
-<ul>
-<li>development</li>
-<li>transparency</li>
-<li>branching - try things and not break</li>
-</ul></li>
-<li>standardization vs. harmonization !!!</li>
-<li>consider yourself as a collaborator</li>
-<li>intangible
-<ul>
-<li>investment</li>
-<li>eliminating resistance to change</li>
-<li>embrace new approaches</li>
-<li>speak the same language (get on the same level) - use non-technical terms</li>
-<li>“thats how it worked before” is not a reason (ex Gen AI)</li>
-<li>rigid vs flexible mindset</li>
-</ul></li>
-</ul></li>
-</ul>
-</section>
-</section>
-<section id="genai-and-clinical-trials" class="level3">
-<h3 class="anchored" data-anchor-id="genai-and-clinical-trials">GenAI and Clinical Trials</h3>
-<ul>
-<li>Gilead</li>
-<li>Eli Lilly</li>
-</ul>
-<section id="llms" class="level4">
-<h4 class="anchored" data-anchor-id="llms">LLMs</h4>
-<ul>
-<li>LLM is an instruction following engine with no memory</li>
-<li>Provide:
-<ul>
-<li>precise instructions</li>
-<li>supply the right information at the right time</li>
-</ul></li>
-<li>Tool Calls</li>
-<li>Model, Context, Protocol (MCP)</li>
-<li>evals are critical for testing and development</li>
-<li>we can’t test everything, and LLMs will screw up
-<ul>
-<li>adopt version control (oversight)</li>
-</ul></li>
-<li>create ways to find errors</li>
-<li>Current state: do not make plans before piloting
-<ul>
-<li>play with current tools</li>
-<li>do not plan to put things in production in 2025</li>
-<li>figure out what it is good at, vs not good at</li>
-</ul></li>
-<li>Use cases:
-<ul>
-<li>mostly documentation</li>
-<li>nobody mentioned as junior analyst (<span class="citation" data-cites="Natalie">@Natalie</span>)</li>
-</ul></li>
-<li>Build foundation to be ready when the models improve</li>
-<li>Is it doing what it’s meant to do?
-<ul>
-<li>Give it to high performers</li>
-<li>If it fails, it will get shut down early.</li>
-</ul></li>
-</ul>
-</section>
-<section id="comprehensive-c-qt-analysis-from-data-to-deliverables" class="level4">
-<h4 class="anchored" data-anchor-id="comprehensive-c-qt-analysis-from-data-to-deliverables">Comprehensive C-QT Analysis From Data to Deliverables</h4>
-<p><a href="https://a2-ai.github.io/cqtkit-docs/versions/1.0.2/">https://a2-ai.github.io/cqtkit-docs/versions/1.0.2/</a></p>
-</section>
-</section>
-<section id="genai-in-positron" class="level3">
-<h3 class="anchored" data-anchor-id="genai-in-positron">GenAI in Positron</h3>
-<ul>
-<li>Polyglot IDE - R, Python, SQL, Rust, Julia,</li>
-<li>Fork of VS Code</li>
-<li>Claude integration into Positron
-<ul>
-<li>knows all environment variables</li>
-</ul></li>
-</ul>
-</section>
-<section id="validation-hub" class="level3">
-<h3 class="anchored" data-anchor-id="validation-hub">Validation Hub</h3>
-<ul>
-<li>R consortium project</li>
-<li>10 organizations</li>
-<li>Involvement from health authorities</li>
-</ul>
-</section>
-<section id="roundtable-1---perspectives-of-cros" class="level3">
-<h3 class="anchored" data-anchor-id="roundtable-1---perspectives-of-cros">Roundtable 1 - Perspectives of CROs</h3>
-<ul>
-<li>Denali</li>
-<li>Cytel</li>
-<li>Atorus</li>
-<li>Syneos</li>
-</ul>
-<p><strong>Takeaway:</strong> Need to have time for learning &amp; leveling up to enable open-source adoption.</p>
-</section>
-<section id="roundtable-2---open-source-change-manangement" class="level3">
-<h3 class="anchored" data-anchor-id="roundtable-2---open-source-change-manangement">Roundtable 2 - Open-Source Change Manangement</h3>
-<ul>
-<li>GSK</li>
-<li>Genentech/Roche</li>
-</ul>
-<p><strong>Takeaway:</strong> Trainings are ineffective, need to implement best practices in everyday work.</p>
-<ul>
-<li>GSK uses <a href="https://en.wikipedia.org/wiki/Just-in-time_learning">“just in time training”</a></li>
-<li>Advanced programmer is teamed with novice programmer to implement best practices in a real-world setting</li>
-<li>Coders will only adopt change if they have to</li>
-</ul>
+<section id="adam" class="level3">
+<h3 class="anchored" data-anchor-id="adam">ADaM</h3>
 
 
 </section>

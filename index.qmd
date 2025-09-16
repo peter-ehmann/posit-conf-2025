@@ -18,9 +18,9 @@ This is a website organizing all the topics and notes from the sessions we atten
 ### Sessions
 
 | Session | Day | Time | Attendee |
-|----|----|----|----|
+|------------------|------------------|------------------|------------------|
 | [R/Pharma Summit](https://posit.co/blog/register-for-r-pharma-at-posit-conf-2025/#r-pharma-summit) | Monday, Sept 15 | 9am-5pm | Peter & Nick |
-| Pharmaverse for Regulatory Submissions | Tuesday, Sept 16 | 9am-5pm | Peter |
+| [Pharmaverse for Regulatory Submissions](https://posit-conf-2025.github.io/pharmaverse/) | Tuesday, Sept 16 | 9am-5pm | Peter |
 | Programming with LLM APIs | Tuesday, Sept 16 | 9am-5pm | Nick |
 | Placeholder | Wednesday, Sept 17 |  |  |
 | Placeholder | Thursday, Sept 18 |  |  |
@@ -31,6 +31,6 @@ This is a website organizing all the topics and notes from the sessions we atten
 |-----------------------------------|--------------------|------|--------------|
 | rPharma meetup at SKOL Brewery    | Sunday, Sept 14    | 7pm  | Peter & Nick |
 | rPharma social event at White Oak | Monday, Sept 15    | 6pm  | Peter & Nick |
+| Welcome Reception                 | Tuesday, Sept 16   | 7pm  | Peter & Nick |
 | Georgia Aquarium                  | Wednesday, Sept 17 | 7pm  | Peter & Nick |
-|                                   |                    |      |              |
 |                                   |                    |      |              |

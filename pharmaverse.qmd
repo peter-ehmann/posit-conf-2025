@@ -1,0 +1,198 @@
+---
+title: "End-to-End Submissions in R with the Pharmaverse"
+---
+
+```{r}
+library(admiral)
+```
+
+### Introduction
+
+[Slides](https://posit-conf-2025.github.io/pharmaverse/slides/01-intro/#/title-slide)
+
+#### Instructors
+
+  - Daniel Sjoberg (MSK -> Roche/Genentech)
+  - Becca Krouse (GSK)
+  - Ben Straub (GSK)
+  - Ram Ganapathy (Syneos -> Roche/Genentech)
+
+#### What is this workshop
+
+  - Get data into CDISC standards (ADaM and SDTM domains)
+  - [Pharmaverse](https://pharmaverse.org/)
+  - Align pharma industry on a standard process
+  - Data collection to submission
+  
+  - R packages to support Clinical Reporting in R
+  - Create SDTM from raw data (CDASH and non-CDASH formats)
+  - Create ADaM datasets from SDTM
+  - Multiple ways to create tables
+  
+#### End-to-End
+
+  1. pharmaverse raw
+  2. pharmaverse SDTM
+  3. pharmaverse ADaM
+  
+#### Exercise 1
+
+```{r}
+# Let's warm-up!
+
+library(dplyr)
+library(pharmaverseadam)
+
+# Using dplyr:
+#  - From the ADSL dataset:
+#   - Subset to the safety population (SAFFL == "Y")
+#   - calculate the number of unique subjects in each treatment group (TRT01A)  
+
+# View(pharmaverseadam::adsl)
+
+knitr::kable(
+  pharmaverseadam::adsl |> 
+    dplyr::filter(SAFFL == "Y") |> 
+    dplyr::group_by(TRT01A) |>
+    dplyr::summarise(n = dplyr::n_distinct(SUBJID))
+)
+```
+
+### SDTM Mapping
+
+[Slides](https://posit-conf-2025.github.io/pharmaverse/slides/02-SDTM/#/title-slide)
+
+#### SDTM
+
+**Study Data Tabulation Model**
+
+  - Mapping raw data to standards
+  - raw (EDC) to SDTM is difficult
+  - SDTM across companies is standard
+  - SDTM -> ADaM is easy
+
+#### sdtm.oak package
+
+  - Accommodates varying raw data structures from different EDC systems and vendors
+
+#### Algorithms
+
+  - variables with similar mapping algorithms are grouped together
+  - 16,000 vars can be grouped into 22 groups
+  - algorithms are backbone of oak
+  
+`assign_no_ct()` -> no controlled terminology
+
+`assign_ct()` -> 1:1 mapping with controlled terminology
+
+`assign_datetime()` -> ISO8601 format
+
+`hardcode_ct()` -> text on EDC (eg units)
+
+#### Compared to dplyr
+
+  - do not have to write `case_when` statements
+  
+#### Topic Variables
+
+  1. Identifier (ID of record)
+  2. Qualifier (what is the variable)
+  3. Timing (when was variable collected)
+
+#### EDC Domains
+
+| **EDC Domain**            | **Code**  |
+|---------------------------|-----------|
+| Demographics              | DM        |
+| Medical History           | MH        |
+| Adverse Events            | AE        |
+| Concomitant Medications   | CM        |
+| Laboratory Results        | LB        |
+| Vital Signs               | VS        |
+| Physical Examination      | PE        |
+| Study Drug Administration | DA        |
+| Subject Disposition       | DS        |
+| Efficacy Assessments      | EF        |
+| Safety Assessments        | SA        |
+| Questionnaires            | QS        |
+| Imaging Assessments       | IMG       |
+| Randomization             | RAND      |
+| Protocol Deviations       | PD        |
+
+#### Example Raw -> SDTM mapping
+
+[Code](https://github.com/posit-conf-2025/pharmaverse/tree/main/slides/02-SDTM/scripts)
+
+  - vs Domain example
+  - dm domain example
+
+```{r}
+library(sdtm.oak)
+library(pharmaverseraw)
+library(dplyr)
+
+# AE aCRF - https://github.com/pharmaverse/pharmaverseraw/blob/main/vignettes/articles/aCRFs/AdverseEvent_aCRF.pdf
+
+# Read in Raw dataset ----
+ae_raw <- pharmaverseraw::ae_raw
+
+# Generate oak_id_vars ----
+ae_raw <- ae_raw %>%
+  generate_oak_id_vars(
+    pat_var = "PATNUM",
+    raw_src = "ae_raw"
+  )
+
+# Read in Controlled Terminology
+study_ct <-  data.frame(
+  codelist_code = c("C66742", "C66742"),
+  term_code = c("C49487", "C49488"),
+  term_value = c("N", "Y"),
+  collected_value = c("No", "Yes"),
+  term_preferred_term = c("No", "Yes"),
+  term_synonyms = c("No", "Yes"),
+  stringsAsFactors = FALSE
+)
+
+# Exercise 1 ------------------------------------------------
+# Map AETERM from raw_var=IT.AETERM, tgt_var=AETERM
+ae <-
+  # Derive topic variable
+  # Map AETERM using assign_no_ct
+  assign_no_ct(
+    raw_dat = ae_raw,
+    raw_var = "IT.AETERM",
+    tgt_var = "AETERM",
+    id_vars = oak_id_vars()
+  )
+
+# Exercise 2 ------------------------------------------------
+# Map AESER from raw_var=IT.AESER, tgt_var=AESER. Codelist code for AESDTH is C66742
+ae <- ae %>%
+  # Map AESER using ??
+  assign_ct(
+    raw_dat = ae_raw,
+    raw_var = "IT.AESER",
+    tgt_var = "AESER",
+    ct_spec = study_ct,
+    ct_clst = "C66742",
+    id_vars = oak_id_vars()
+  )
+
+# Exercise 3 ------------------------------------------------
+# Map AESDTH from raw_var=IT.AESDTH, tgt_var=AESDTH. Annotation text is 
+# If "Yes" then AESDTH = "Y" else Not Submitted. Codelist code for AESDTH is C66742
+
+ae <- ae %>%
+  # Map AESDTH using condition_add & assign_ct, raw_var=IT.AESDTH, tgt_var=AESDTH
+  assign_ct(
+    raw_dat = condition_add(ae_raw, IT.AESDTH == "Yes"),
+    raw_var = "IT.AESDTH",
+    tgt_var = "AESDTH",
+    ct_spec = study_ct,
+    ct_clst = "C66742",
+    id_vars = oak_id_vars()
+  )
+```
+
+### ADaM

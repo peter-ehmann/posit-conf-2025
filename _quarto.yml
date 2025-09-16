@@ -10,6 +10,8 @@ website:
         href: index.qmd
       - text: R/Pharma Summit
         href: rPharma.qmd
+      - text: Pharmaverse
+        href: pharmaverse.qmd
 
 format:
   html:
@@ -18,9 +20,9 @@ format:
     toc-expand: true
     toc-depth: 4
     number-sections: false
-    number-depth: 4
     embed-resources: true
     code-background: true
+    code-fold: true
     theme: zephyr
     grid:
       sidebar-width: 350px
