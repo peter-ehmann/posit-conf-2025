@@ -1,0 +1,15 @@
+---
+title: "Pictures"
+format:
+  html:
+    toc: false
+    grid:
+      sidebar-width: 50px
+      body-width: 1500px
+      margin-width: 50px
+      gutter-width: 1.5rem
+---
+
+### Geogria Aquarium
+
+[Quarto Help](https://quarto.org/docs/authoring/figures.html)

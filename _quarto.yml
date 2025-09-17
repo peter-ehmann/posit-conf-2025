@@ -3,7 +3,7 @@ project:
   output-dir: docs
 
 website:
-  title: "POSIT::CONF(2025)"
+  title: "posit::conf(2025)"
   navbar:
     left:
       - text: Home
@@ -12,6 +12,12 @@ website:
         href: rPharma.qmd
       - text: Pharmaverse
         href: pharmaverse.qmd
+      - text: Wednesday Notes
+        href: wednesday.qmd
+      - text: Thursday Notes
+        href: thursday.qmd
+      - text: Pictures
+        href: photos.qmd
 
 format:
   html:

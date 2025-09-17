@@ -1,0 +1,137 @@
+---
+title: "Wednesday Notes"
+---
+
+### Keynote (9am)
+
+**Presenter:** Jonathan McPherson (jmcphers)
+
+#### Development of RStudio & Positron
+
+  - Creating and improving tools
+  - Sampling bias: only hear from top users
+  - missing values: find your target audience
+  - users don't know what they want
+  - watch people using your tool
+  - take complicated things simple
+  - MEET PEOPLE WHERE THEY ARE
+  
+  - Yes: "You should make a seperate folder for each project"
+    - But: not required (good idea - but forcing it is not ergonomic)
+    
+  - Yes: "Don't change the working directory" (not portable)
+    - But: sometimes people want to (at the expense of ideological purity)
+    
+  - Empower users
+  - VS Code's extension model is a core reason for its success
+
+#### Positron
+
+  - R and Python languages are extensions
+  - data science workbench
+  
+  - Core functionality
+  - Extensions by open-source solve edge-cases
+  
+  - Output: PDF -> Effect: less time search for info
+  - Tool's output is shaped by its design
+  - **A tool is a statement about what you want the world to become**
+  - Tools communicate a point of view
+  
+  - Positron:
+    - ther should be many languages that talk together
+    - scientific communications
+    - reproducible
+    - science should be free and open
+  
+  - Is RStudio phasing out? No
+  - Positron is more versitile
+  - More generic tool (Positron): not as good for specific purpose
+  - More specific tool (RStudio): fit for purpose
+  
+  - New lenguage upcoming: Javascript
+
+### Positron (10:20am)
+
+#### Ide-ntity Crisis: Choosing the right tool for me
+
+  - VS Code
+  - Positron
+  - RStudio
+  - Jupyter Notebook
+  
+  - choose IDE that fits your project/workflow
+
+#### Tips and Tricks for Positron
+
+  - personalizing your coding space
+  - making data exploration more pleasant
+  - thoughtful pairing with AI assistant (Positron Assistant)
+
+#### Outgrowing your laptop with Positron
+
+[Slides](https://github.com/austin3dickey/ssh-demo/blob/main/slides.pdf)
+
+[GitHub](https://github.com/austin3dickey/ssh-demo)
+
+[https://positron.posit.co/remote-ssh.html](https://positron.posit.co/remote-ssh.html)
+
+  - use parquet file formats
+  - arrow, duckplyr, duckdb
+  - lazy execution
+
+#### Exploring datasets in Positron
+
+  - [Wes McKinney](https://wesmckinney.com/)
+  - Pain Points
+    - Context Switching (code <-> figures)
+    - Scale Limitations
+    - Performace (with large datasets)
+    - Low Information Density (time looking for features)
+    
+  - Positron Data Viewer Features
+    - histogram, summnary stats, N missing
+    - duckdb backend for fast filtering
+    - pinning columns (freeze panes)
+  
+### Rapid Fire 10min talks
+
+  - Use Your Data Skills for Good: Ideas for Community Service
+  - Make Big Geospatial Data Accessible with Arrow
+  - Approaching Positron from RStudio
+  - Brand YML and Dark Mode in Quarto
+    - create a `_brand.yml` for REGN
+  - Automating Event Scheduling with Python in Positron
+    - a lot of up front work for time savings in long run
+  - Putting an {ellmer} AI in production with the blessing of IT
+  - Enabling geospatial workflow management with targets: an R package origin story
+  - Plotgardener – Genomic Data Visualization Made Easy
+  - What we're doing to make Quarto fast(er)
+    - updates to quarto to make rendering faster!
+  - Multiple Console Sessions in Positron
+  - It's all fun and games til your analysis code is finished: the player package in R
+  - Birthing the pregnancy package
+
+### Quarto
+
+#### surveydown
+
+  - A Markdown-Based Platform for Interactive and Reproducible Surveys Using Quarto and Shiny
+
+#### Quarto Automation
+
+  - Using Quarto to Improve Formatting and Automate the Generation of Hundreds of Reports
+  - [GitHub Repo](https://github.com/ksrinc/posit_conf_2025_quarto_automation)
+  
+#### Simplify R Adoption
+
+  - Instant Impact: Developing {docorator} to Simplify R Adoption for Teams
+
+#### Expanding quarto capabilities
+
+  - Beyond the Basics: Expanding Quarto's Capabilities with Lua
+
+### Keynote: Combining AI and Human Intelligence
+
+This presentation explores the complex and often contradictory nature of large language models (LLMs) in data science, acknowledging the simultaneous excitement and apprehension that we feel toward these technologies. We’ll provide a practical framework to help you understand the LLM ecosystem (from foundation models and hosting to SDKs and applications) that supports our current philosophy: augmenting, not replacing human intelligence. The talk demonstrates how Posit is addressing this space through two complementary approaches: building SDKs and tools that help you create your own LLM-powered solutions, and developing integrated LLM capabilities directly into data science workflows through tools like Positron assistant and databot. We’ll showcase practical, immediately useful applications while addressing current limitations, providing you with both the emotional preparation and technical foundation needed to effectively leverage LLMs in their data science practice today.
+

@@ -1,5 +1,5 @@
 ---
-title: "POSIT::CONF(2025)"
+title: "posit::conf(2025)"
 author: "Peter Ehmann & Nick Giangreco"
 date: "2025-09-15"
 format:
@@ -11,33 +11,27 @@ format:
       gutter-width: 1.5rem
 ---
 
-We attended the [Posit Conference](https://posit.co/conference/) in Atlanta, GA.
+### Introduction
 
-This is a website organizing all the topics and notes from the sessions we attended.
+-   We attended the [2025 Posit Conference](https://posit.co/conference/) in Atlanta, GA.
 
-[GitHub Repository](https://github.com/posit-conf-2025) for all conference materials.
+-   This is a website organizing all the topics and notes from the sessions we attended.
+
+-   [GitHub Repository](https://github.com/posit-conf-2025) for all conference materials.
 
 ### REGN Attendance
 
-##### PMQTS
+-   Peter Ehmann (PMQTS)
 
--   Peter Ehmann
+-   Nick Giangreco (PMQTS)
 
--   Nick Giangreco
+-   Ryan Yu (BDM - stat programming)
 
-##### BDM (stat programming)
+-   Sri Pavan Vemuri (BDM - stat programming)
 
--   Ryan Yu
+-   Regis James (DADS)
 
--   Sri Pavan Vemuri
-
-##### DADS
-
--   Regis James
-
-##### BICS
-
--   Marina Lehmkuhl
+-   Marina Lehmkuhl (BICS)
 
 ### Sessions
 
@@ -46,47 +40,80 @@ This is a website organizing all the topics and notes from the sessions we atten
 | [R/Pharma Summit](https://posit.co/blog/register-for-r-pharma-at-posit-conf-2025/#r-pharma-summit) | Monday, Sept 15 | 9am-5pm | Peter & Nick |
 | [Pharmaverse for Regulatory Submissions](https://posit-conf-2025.github.io/pharmaverse/) | Tuesday, Sept 16 | 9am-5pm | Peter |
 | [Programming with LLM APIs](https://github.com/posit-conf-2025/llm) | Tuesday, Sept 16 | 9am-5pm | Nick |
-| Placeholder | Wednesday, Sept 17 |  |  |
-| Placeholder | Thursday, Sept 18 |  |  |
+| [Keynote (RStudio -\> Positron) - Jonathan McPherson](https://reg.conf.posit.co/flow/posit/positconf25/attendee-portal/page/sessioncatalog/session/1745350850391001oFGi) | Wednesday, Sept 17 | 9:00am | Peter & Nick |
+| Positron | Wednesday, Sept 17 | 10:20am | Peter |
+| Shiny for Humans | Wednesday, Sept 17 | 10:20am | Nick |
+| Lightning Talks | Wednesday, Sept 17 | 1:00pm | Peter |
+| Shiny for Humans | Wednesday, Sept 17 | 1:00pm | Nick |
+| Quarto | Wednesday, Sept 17 | 2:40pm | Peter |
+| Get Your Ducks in a Row (Databases) | Wednesday, Sept 17 | 2:40pm | Nick |
+| AI and human intelligence in data science - Joe Cheng | Wednesday, Sept 17 | 4:00pm | Peter & Nick |
+|  | Thursday, Sept 18 | 9am | Peter & Nick |
+|  | Thursday, Sept 18 | 10:20am | Peter |
+|  | Thursday, Sept 18 | 10:20am | Nick |
+|  | Thursday, Sept 18 | 1:00pm | Peter |
+|  | Thursday, Sept 18 | 1:00pm | Nick |
+|  | Thursday, Sept 18 | 2:40pm | Peter |
+|  | Thursday, Sept 18 | 2:40pm | Nick |
+|  | Thursday, Sept 18 | 4:00pm | Peter & Nick |
 
 ### Events
 
-| Session                           | Day                | Time | Attendee     |
-|-----------------------------------|--------------------|------|--------------|
-| rPharma meetup at SKOL Brewery    | Sunday, Sept 14    | 7pm  | Peter & Nick |
-| rPharma social event at White Oak | Monday, Sept 15    | 6pm  | Peter & Nick |
-| Welcome Reception                 | Tuesday, Sept 16   | 7pm  | Peter & Nick |
-| Georgia Aquarium                  | Wednesday, Sept 17 | 7pm  | Peter & Nick |
-|                                   |                    |      |              |
+| Session                           | Day                | Time  | Attendee     |
+|-----------------------------|---------------|--------------|--------------|
+| rPharma meetup at SKOL Brewery    | Sunday, Sept 14    | 7-9pm | Peter & Nick |
+| rPharma social event at White Oak | Monday, Sept 15    | 6-8pm | Peter & Nick |
+| Welcome Reception                 | Tuesday, Sept 16   | 5-7pm | Peter & Nick |
+| Georgia Aquarium                  | Wednesday, Sept 17 | 7-9pm | Peter & Nick |
 
 ### Companies
 
 **Organizations we interacted with:**
 
-Biotech/Pharma
+-   Biotech/Pharma
 
--   [Roche/Genentech](https://github.com/insightsengineering)
+    -   [Roche/Genentech](https://github.com/insightsengineering)
 
--   Novartis
+        -   [Daniel Sjoberg](https://www.danieldsjoberg.com/)
 
--   Eli Lilly
+    -   Novartis
 
--   J&J
+    -   Eli Lilly
 
--   GSK
+    -   J&J
 
--   Sanofi
+    -   GSK
 
--   Abbvie
+        -   Becca Krouse
 
-CROs
+    -   Sanofi
 
--   Flatiron Health
+    -   Abbvie
 
--   Denali
+-   CROs
 
--   Syneos
+    -   Flatiron Health
 
--   Atorus
+    -   Denali
 
--   Wu Consulting
+    -   Syneos
+
+    -   Atorus
+
+    -   Wu Consulting
+
+    -   Appsilon - using teal & LLM to generate quick/simple Shiny apps
+
+-   Posit Connect (Joe Roberts - rep)
+
+    -   Error: "Database is locked." - just keep trying to publish, not an error with code
+
+    -   Getting metrics from API - Regis made an app, but API data formatting changed
+
+### Major Takeaways
+
+-   Placeholder
+
+-   Placeholder
+
+-   Placeholder
