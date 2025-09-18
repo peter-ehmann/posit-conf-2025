@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Wednesday Notes – posit::conf(2025)</title>
+<title>Key Takeaways – posit::conf(2025)</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -4733,7 +4733,7 @@ vertical-align: -.125em;
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./takeaways.html"> 
+    <a class="nav-link active" href="./takeaways.html" aria-current="page"> 
 <span class="menu-text">Key Takeaways</span></a>
   </li>  
   <li class="nav-item">
@@ -4745,7 +4745,7 @@ vertical-align: -.125em;
 <span class="menu-text">Pharmaverse</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./wednesday.html" aria-current="page"> 
+    <a class="nav-link" href="./wednesday.html"> 
 <span class="menu-text">Wednesday Notes</span></a>
   </li>  
   <li class="nav-item">
@@ -4771,27 +4771,11 @@ vertical-align: -.125em;
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#keynote-9am" id="toc-keynote-9am" class="nav-link active" data-scroll-target="#keynote-9am">Keynote (9am)</a>
-  <ul>
-  <li><a href="#development-of-rstudio-positron" id="toc-development-of-rstudio-positron" class="nav-link" data-scroll-target="#development-of-rstudio-positron">Development of RStudio &amp; Positron</a></li>
-  <li><a href="#positron" id="toc-positron" class="nav-link" data-scroll-target="#positron">Positron</a></li>
-  </ul></li>
-  <li><a href="#positron-1020am" id="toc-positron-1020am" class="nav-link" data-scroll-target="#positron-1020am">Positron (10:20am)</a>
-  <ul>
-  <li><a href="#ide-ntity-crisis-choosing-the-right-tool-for-me" id="toc-ide-ntity-crisis-choosing-the-right-tool-for-me" class="nav-link" data-scroll-target="#ide-ntity-crisis-choosing-the-right-tool-for-me">Ide-ntity Crisis: Choosing the right tool for me</a></li>
-  <li><a href="#tips-and-tricks-for-positron" id="toc-tips-and-tricks-for-positron" class="nav-link" data-scroll-target="#tips-and-tricks-for-positron">Tips and Tricks for Positron</a></li>
-  <li><a href="#outgrowing-your-laptop-with-positron" id="toc-outgrowing-your-laptop-with-positron" class="nav-link" data-scroll-target="#outgrowing-your-laptop-with-positron">Outgrowing your laptop with Positron</a></li>
-  <li><a href="#exploring-datasets-in-positron" id="toc-exploring-datasets-in-positron" class="nav-link" data-scroll-target="#exploring-datasets-in-positron">Exploring datasets in Positron</a></li>
-  </ul></li>
-  <li><a href="#rapid-fire-10min-talks" id="toc-rapid-fire-10min-talks" class="nav-link" data-scroll-target="#rapid-fire-10min-talks">Rapid Fire 10min talks</a></li>
-  <li><a href="#quarto" id="toc-quarto" class="nav-link" data-scroll-target="#quarto">Quarto</a>
-  <ul>
-  <li><a href="#surveydown" id="toc-surveydown" class="nav-link" data-scroll-target="#surveydown">surveydown</a></li>
-  <li><a href="#quarto-automation" id="toc-quarto-automation" class="nav-link" data-scroll-target="#quarto-automation">Quarto Automation</a></li>
-  <li><a href="#simplify-r-adoption" id="toc-simplify-r-adoption" class="nav-link" data-scroll-target="#simplify-r-adoption">Simplify R Adoption</a></li>
-  <li><a href="#expanding-quarto-capabilities" id="toc-expanding-quarto-capabilities" class="nav-link" data-scroll-target="#expanding-quarto-capabilities">Expanding quarto capabilities</a></li>
-  </ul></li>
-  <li><a href="#keynote-combining-ai-and-human-intelligence" id="toc-keynote-combining-ai-and-human-intelligence" class="nav-link" data-scroll-target="#keynote-combining-ai-and-human-intelligence">Keynote: Combining AI and Human Intelligence</a></li>
+  <li><a href="#common-themes" id="toc-common-themes" class="nav-link active" data-scroll-target="#common-themes">Common Themes</a></li>
+  <li><a href="#why-use-open-source-best-practices" id="toc-why-use-open-source-best-practices" class="nav-link" data-scroll-target="#why-use-open-source-best-practices">Why use Open-Source Best Practices?</a></li>
+  <li><a href="#how-do-we-contribute-to-open-source" id="toc-how-do-we-contribute-to-open-source" class="nav-link" data-scroll-target="#how-do-we-contribute-to-open-source">How do we contribute to open source?</a></li>
+  <li><a href="#why-come-to-posit-conf" id="toc-why-come-to-posit-conf" class="nav-link" data-scroll-target="#why-come-to-posit-conf">Why come to Posit Conf?</a></li>
+  <li><a href="#how-did-we-make-this-website" id="toc-how-did-we-make-this-website" class="nav-link" data-scroll-target="#how-did-we-make-this-website">How did we make this website?</a></li>
   </ul>
 </nav>
 </nav>
@@ -4804,7 +4788,7 @@ vertical-align: -.125em;
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Wednesday Notes</h1>
+<h1 class="title">Key Takeaways</h1>
 </div>
 
 
@@ -4821,169 +4805,72 @@ vertical-align: -.125em;
 </header>
 
 
-<section id="keynote-9am" class="level3">
-<h3 class="anchored" data-anchor-id="keynote-9am">Keynote (9am)</h3>
-<p><strong>Presenter:</strong> Jonathan McPherson (jmcphers)</p>
-<section id="development-of-rstudio-positron" class="level4">
-<h4 class="anchored" data-anchor-id="development-of-rstudio-positron">Development of RStudio &amp; Positron</h4>
+<section id="common-themes" class="level3">
+<h3 class="anchored" data-anchor-id="common-themes">Common Themes</h3>
+<section id="use-git" class="level5">
+<h5 class="anchored" data-anchor-id="use-git">1. Use git</h5>
 <ul>
-<li><p>Creating and improving tools</p></li>
-<li><p>Sampling bias: only hear from top users</p></li>
-<li><p>missing values: find your target audience</p></li>
-<li><p>users don’t know what they want</p></li>
-<li><p>watch people using your tool</p></li>
-<li><p>take complicated things simple</p></li>
-<li><p>MEET PEOPLE WHERE THEY ARE</p></li>
-<li><p>Yes: “You should make a seperate folder for each project”</p>
-<ul>
-<li>But: not required (good idea - but forcing it is not ergonomic)</li>
-</ul></li>
-<li><p>Yes: “Don’t change the working directory” (not portable)</p>
-<ul>
-<li>But: sometimes people want to (at the expense of ideological purity)</li>
-</ul></li>
-<li><p>Empower users</p></li>
-<li><p>VS Code’s extension model is a core reason for its success</p></li>
+<li>TBD</li>
 </ul>
 </section>
-<section id="positron" class="level4">
-<h4 class="anchored" data-anchor-id="positron">Positron</h4>
+<section id="learn-by-doing" class="level5">
+<h5 class="anchored" data-anchor-id="learn-by-doing">2. Learn by doing</h5>
 <ul>
-<li><p>R and Python languages are extensions</p></li>
-<li><p>data science workbench</p></li>
-<li><p>Core functionality</p></li>
-<li><p>Extensions by open-source solve edge-cases</p></li>
-<li><p>Output: PDF -&gt; Effect: less time search for info</p></li>
-<li><p>Tool’s output is shaped by its design</p></li>
-<li><p><strong>A tool is a statement about what you want the world to become</strong></p></li>
-<li><p>Tools communicate a point of view</p></li>
-<li><p>Positron:</p>
+<li>TBD</li>
+</ul>
+</section>
+<section id="use-llm-as-a-partner-but-you-are-in-control" class="level5">
+<h5 class="anchored" data-anchor-id="use-llm-as-a-partner-but-you-are-in-control">3. Use LLM as a partner, but you are in control</h5>
 <ul>
-<li>ther should be many languages that talk together</li>
-<li>scientific communications</li>
-<li>reproducible</li>
-<li>science should be free and open</li>
-</ul></li>
-<li><p>Is RStudio phasing out? No</p></li>
-<li><p>Positron is more versitile</p></li>
-<li><p>More generic tool (Positron): not as good for specific purpose</p></li>
-<li><p>More specific tool (RStudio): fit for purpose</p></li>
-<li><p>New lenguage upcoming: Javascript</p></li>
+<li>TBD</li>
+</ul>
+</section>
+<section id="communicate-the-roi-on-open-source-best-practices" class="level5">
+<h5 class="anchored" data-anchor-id="communicate-the-roi-on-open-source-best-practices">4. Communicate the ROI on open-source best practices</h5>
+<ul>
+<li>TBD</li>
+</ul>
+</section>
+<section id="positron-is-a-new-ide-but-rstudio-vs-code-jupyter-notebooks-still-developed" class="level5">
+<h5 class="anchored" data-anchor-id="positron-is-a-new-ide-but-rstudio-vs-code-jupyter-notebooks-still-developed">5. Positron is a new IDE but RStudio, VS Code, Jupyter Notebooks still developed</h5>
+<ul>
+<li>built in Posit AI bots integrated into the IDE (assistant and databot)</li>
 </ul>
 </section>
 </section>
-<section id="positron-1020am" class="level3">
-<h3 class="anchored" data-anchor-id="positron-1020am">Positron (10:20am)</h3>
-<section id="ide-ntity-crisis-choosing-the-right-tool-for-me" class="level4">
-<h4 class="anchored" data-anchor-id="ide-ntity-crisis-choosing-the-right-tool-for-me">Ide-ntity Crisis: Choosing the right tool for me</h4>
+<section id="why-use-open-source-best-practices" class="level3">
+<h3 class="anchored" data-anchor-id="why-use-open-source-best-practices">Why use Open-Source Best Practices?</h3>
 <ul>
-<li><p>VS Code</p></li>
-<li><p>Positron</p></li>
-<li><p>RStudio</p></li>
-<li><p>Jupyter Notebook</p></li>
-<li><p>choose IDE that fits your project/workflow</p></li>
+<li>TBD</li>
 </ul>
 </section>
-<section id="tips-and-tricks-for-positron" class="level4">
-<h4 class="anchored" data-anchor-id="tips-and-tricks-for-positron">Tips and Tricks for Positron</h4>
+<section id="how-do-we-contribute-to-open-source" class="level3">
+<h3 class="anchored" data-anchor-id="how-do-we-contribute-to-open-source">How do we contribute to open source?</h3>
 <ul>
-<li>personalizing your coding space</li>
-<li>making data exploration more pleasant</li>
-<li>thoughtful pairing with AI assistant (Positron Assistant)</li>
+<li>Use the packages</li>
+<li>Write blogs, create templates</li>
+<li>Submit Issues and/or Code</li>
+<li>documentation</li>
+<li>feature requests</li>
+<li>Bug</li>
+<li>Join as a contributor – get in touch with the maintainer</li>
 </ul>
 </section>
-<section id="outgrowing-your-laptop-with-positron" class="level4">
-<h4 class="anchored" data-anchor-id="outgrowing-your-laptop-with-positron">Outgrowing your laptop with Positron</h4>
-<p><a href="https://github.com/austin3dickey/ssh-demo/blob/main/slides.pdf">Slides</a></p>
-<p><a href="https://github.com/austin3dickey/ssh-demo">GitHub</a></p>
-<p><a href="https://positron.posit.co/remote-ssh.html">https://positron.posit.co/remote-ssh.html</a></p>
+<section id="why-come-to-posit-conf" class="level3">
+<h3 class="anchored" data-anchor-id="why-come-to-posit-conf">Why come to Posit Conf?</h3>
 <ul>
-<li>use parquet file formats</li>
-<li>arrow, duckplyr, duckdb</li>
-<li>lazy execution</li>
+<li>large pharma/biotech presence (R/Pharma community)</li>
+<li>talk directly with Posit developers &amp; reps</li>
 </ul>
 </section>
-<section id="exploring-datasets-in-positron" class="level4">
-<h4 class="anchored" data-anchor-id="exploring-datasets-in-positron">Exploring datasets in Positron</h4>
+<section id="how-did-we-make-this-website" class="level3">
+<h3 class="anchored" data-anchor-id="how-did-we-make-this-website">How did we make this website?</h3>
 <ul>
-<li><a href="https://wesmckinney.com/">Wes McKinney</a></li>
-<li>Pain Points
-<ul>
-<li>Context Switching (code &lt;-&gt; figures)</li>
-<li>Scale Limitations</li>
-<li>Performace (with large datasets)</li>
-<li>Low Information Density (time looking for features)</li>
-</ul></li>
-<li>Positron Data Viewer Features
-<ul>
-<li>histogram, summnary stats, N missing</li>
-<li>duckdb backend for fast filtering</li>
-<li>pinning columns (freeze panes)</li>
-</ul></li>
+<li><a href="https://quarto.org/docs/websites/">Quarto Website</a></li>
+<li>Use version control on GitHub</li>
+<li>Render <code>html</code> files to <code>doc/</code> folder</li>
+<li>GitHub creates website</li>
 </ul>
-</section>
-</section>
-<section id="rapid-fire-10min-talks" class="level3">
-<h3 class="anchored" data-anchor-id="rapid-fire-10min-talks">Rapid Fire 10min talks</h3>
-<ul>
-<li>Use Your Data Skills for Good: Ideas for Community Service</li>
-<li>Make Big Geospatial Data Accessible with Arrow</li>
-<li>Approaching Positron from RStudio</li>
-<li>Brand YML and Dark Mode in Quarto
-<ul>
-<li>create a <code>_brand.yml</code> for REGN</li>
-</ul></li>
-<li>Automating Event Scheduling with Python in Positron
-<ul>
-<li>a lot of up front work for time savings in long run</li>
-</ul></li>
-<li>Putting an {ellmer} AI in production with the blessing of IT</li>
-<li>Enabling geospatial workflow management with targets: an R package origin story</li>
-<li>Plotgardener – Genomic Data Visualization Made Easy</li>
-<li>What we’re doing to make Quarto fast(er)
-<ul>
-<li>updates to quarto to make rendering faster!</li>
-</ul></li>
-<li>Multiple Console Sessions in Positron</li>
-<li>It’s all fun and games til your analysis code is finished: the player package in R</li>
-<li>Birthing the pregnancy package</li>
-</ul>
-</section>
-<section id="quarto" class="level3">
-<h3 class="anchored" data-anchor-id="quarto">Quarto</h3>
-<section id="surveydown" class="level4">
-<h4 class="anchored" data-anchor-id="surveydown">surveydown</h4>
-<ul>
-<li>A Markdown-Based Platform for Interactive and Reproducible Surveys Using Quarto and Shiny</li>
-</ul>
-</section>
-<section id="quarto-automation" class="level4">
-<h4 class="anchored" data-anchor-id="quarto-automation">Quarto Automation</h4>
-<ul>
-<li>Using Quarto to Improve Formatting and Automate the Generation of Hundreds of Reports</li>
-<li><a href="https://github.com/ksrinc/posit_conf_2025_quarto_automation">GitHub Repo</a></li>
-</ul>
-</section>
-<section id="simplify-r-adoption" class="level4">
-<h4 class="anchored" data-anchor-id="simplify-r-adoption">Simplify R Adoption</h4>
-<ul>
-<li>Instant Impact: Developing {docorator} to Simplify R Adoption for Teams</li>
-<li>Analogy: Home Renovation
-<ul>
-<li>Open Source (qmd) allows to stay on top of latest trends and adopt them easily</li>
-</ul></li>
-</ul>
-</section>
-<section id="expanding-quarto-capabilities" class="level4">
-<h4 class="anchored" data-anchor-id="expanding-quarto-capabilities">Expanding quarto capabilities</h4>
-<ul>
-<li>Beyond the Basics: Expanding Quarto’s Capabilities with Lua</li>
-</ul>
-</section>
-</section>
-<section id="keynote-combining-ai-and-human-intelligence" class="level3">
-<h3 class="anchored" data-anchor-id="keynote-combining-ai-and-human-intelligence">Keynote: Combining AI and Human Intelligence</h3>
-<p>This presentation explores the complex and often contradictory nature of large language models (LLMs) in data science, acknowledging the simultaneous excitement and apprehension that we feel toward these technologies. We’ll provide a practical framework to help you understand the LLM ecosystem (from foundation models and hosting to SDKs and applications) that supports our current philosophy: augmenting, not replacing human intelligence. The talk demonstrates how Posit is addressing this space through two complementary approaches: building SDKs and tools that help you create your own LLM-powered solutions, and developing integrated LLM capabilities directly into data science workflows through tools like Positron assistant and databot. We’ll showcase practical, immediately useful applications while addressing current limitations, providing you with both the emotional preparation and technical foundation needed to effectively leverage LLMs in their data science practice today.</p>
 
 
 </section>

@@ -1,0 +1,51 @@
+---
+title: "Key Takeaways"
+---
+
+### Common Themes
+
+##### 1. Use git
+
+ - TBD
+
+##### 2. Learn by doing
+
+ - TBD
+
+##### 3. Use LLM as a partner, but you are in control
+
+ - TBD
+
+##### 4. Communicate the ROI on open-source best practices
+
+ - TBD
+
+##### 5. Positron is a new IDE but RStudio, VS Code, Jupyter Notebooks still developed
+
+  - built in Posit AI bots integrated into the IDE (assistant and databot)
+
+### Why use Open-Source Best Practices?
+
+  - TBD
+
+### How do we contribute to open source?
+
+  - Use the packages
+  - Write blogs, create templates
+  - Submit Issues and/or Code
+  -   documentation
+  -   feature requests
+  -   Bug
+  - Join as a contributor – get in touch with the maintainer
+
+### Why come to Posit Conf?
+
+  - large pharma/biotech presence (R/Pharma community)
+  - talk directly with Posit developers & reps
+  
+### How did we make this website?
+
+  - [Quarto Website](https://quarto.org/docs/websites/)
+  - Use version control on GitHub
+  - Render `html` files to `doc/` folder
+  - GitHub creates website

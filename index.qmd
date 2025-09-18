@@ -1,7 +1,8 @@
 ---
 title: "posit::conf(2025)"
 author: "Peter Ehmann & Nick Giangreco"
-date: "2025-09-15"
+date: "2025-09-19"
+editor: visual
 format:
   html:
     grid:
@@ -19,7 +20,7 @@ format:
 
 -   [GitHub Repository](https://github.com/posit-conf-2025) for all conference materials.
 
-### REGN Attendance
+### Colleagues
 
 -   Peter Ehmann (PMQTS)
 
@@ -40,27 +41,26 @@ format:
 | [R/Pharma Summit](https://posit.co/blog/register-for-r-pharma-at-posit-conf-2025/#r-pharma-summit) | Monday, Sept 15 | 9am-5pm | Peter & Nick |
 | [Pharmaverse for Regulatory Submissions](https://posit-conf-2025.github.io/pharmaverse/) | Tuesday, Sept 16 | 9am-5pm | Peter |
 | [Programming with LLM APIs](https://github.com/posit-conf-2025/llm) | Tuesday, Sept 16 | 9am-5pm | Nick |
-| [Keynote (RStudio -\> Positron) - Jonathan McPherson](https://reg.conf.posit.co/flow/posit/positconf25/attendee-portal/page/sessioncatalog/session/1745350850391001oFGi) | Wednesday, Sept 17 | 9:00am | Peter & Nick |
-| Positron | Wednesday, Sept 17 | 10:20am | Peter |
-| Shiny for Humans | Wednesday, Sept 17 | 10:20am | Nick |
-| Lightning Talks | Wednesday, Sept 17 | 1:00pm | Peter |
-| Shiny for Humans | Wednesday, Sept 17 | 1:00pm | Nick |
-| Quarto | Wednesday, Sept 17 | 2:40pm | Peter |
-| Get Your Ducks in a Row (Databases) | Wednesday, Sept 17 | 2:40pm | Nick |
-| AI and human intelligence in data science - Joe Cheng | Wednesday, Sept 17 | 4:00pm | Peter & Nick |
-|  | Thursday, Sept 18 | 9am | Peter & Nick |
-|  | Thursday, Sept 18 | 10:20am | Peter |
-|  | Thursday, Sept 18 | 10:20am | Nick |
-|  | Thursday, Sept 18 | 1:00pm | Peter |
-|  | Thursday, Sept 18 | 1:00pm | Nick |
-|  | Thursday, Sept 18 | 2:40pm | Peter |
-|  | Thursday, Sept 18 | 2:40pm | Nick |
-|  | Thursday, Sept 18 | 4:00pm | Peter & Nick |
+| [Keynote: RStudio -\> Positron (Jonathan McPherson)](https://reg.conf.posit.co/flow/posit/positconf25/attendee-portal/page/sessioncatalog/session/1745350850391001oFGi) | Wednesday, Sept 17 | 9:00am | Peter & Nick |
+| [Positron](https://reg.conf.posit.co/flow/posit/positconf25/attendee-portal/page/sessioncatalog/session/1745351601963001aBKi) | Wednesday, Sept 17 | 10:20am | Peter |
+| [Shiny for Humans](https://reg.conf.posit.co/flow/posit/positconf25/attendee-portal/page/sessioncatalog/session/1745351602179001akB6) | Wednesday, Sept 17 | 10:20am | Nick |
+| [Lightning Talks](https://reg.conf.posit.co/flow/posit/positconf25/attendee-portal/page/sessioncatalog/session/1745351143742001aTfb) | Wednesday, Sept 17 | 1:00pm | Peter |
+| [Shiny for Humans](https://reg.conf.posit.co/flow/posit/positconf25/attendee-portal/page/sessioncatalog/session/1745351602179001akB6) | Wednesday, Sept 17 | 1:00pm | Nick |
+| [Quarto](https://reg.conf.posit.co/flow/posit/positconf25/attendee-portal/page/sessioncatalog/session/1745351602107001ax1G) | Wednesday, Sept 17 | 2:40pm | Peter |
+| [Get Your Ducks in a Row (Databases)](https://reg.conf.posit.co/flow/posit/positconf25/attendee-portal/page/sessioncatalog/session/1745351601199001aqoB) | Wednesday, Sept 17 | 2:40pm | Nick |
+| [AI and human intelligence (Joe Cheng & Hadley W)](https://reg.conf.posit.co/flow/posit/positconf25/attendee-portal/page/sessioncatalog/session/1745350849722001oxAf) | Wednesday, Sept 17 | 4:00pm | Peter & Nick |
+| [The Psychology of Technologists](https://reg.conf.posit.co/flow/posit/positconf25/attendee-portal/page/sessioncatalog/session/1745350850328001opY2) | Thursday, Sept 18 | 9am | Peter & Nick |
+| [Big Organization Change Management](https://reg.conf.posit.co/flow/posit/positconf25/attendee-portal/page/sessioncatalog/session/1745351601513001anfC) | Thursday, Sept 18 | 10:20am | Peter |
+| [The Power of Presentation](https://reg.conf.posit.co/flow/posit/positconf25/attendee-portal/page/sessioncatalog/session/1745351601272001atTE) | Thursday, Sept 18 | 10:20am | Nick |
+| [ML and Statistical Models](https://reg.conf.posit.co/flow/posit/positconf25/attendee-portal/page/sessioncatalog/session/1745351601666001agrt) | Thursday, Sept 18 | 1:00pm | Peter |
+| [Beautiful, Effective, and Accessible Data Visualization](https://reg.conf.posit.co/flow/posit/positconf25/attendee-portal/page/sessioncatalog/session/1745351601121001aPig) | Thursday, Sept 18 | 1:00pm | Nick |
+| [Enterprise Data Platforms](https://reg.conf.posit.co/flow/posit/positconf25/attendee-portal/page/sessioncatalog/session/1745351601343001aJpT) | Thursday, Sept 18 | 2:40pm | Peter & Nick |
+| [Trustworthy Data Visualization](https://reg.conf.posit.co/flow/posit/positconf25/attendee-portal/page/sessioncatalog/session/1745350850263001o6Gl) | Thursday, Sept 18 | 4:00pm | Peter & Nick |
 
 ### Events
 
 | Session                           | Day                | Time  | Attendee     |
-|-----------------------------|---------------|--------------|--------------|
+|--------------------|------------------|------------------|------------------|
 | rPharma meetup at SKOL Brewery    | Sunday, Sept 14    | 7-9pm | Peter & Nick |
 | rPharma social event at White Oak | Monday, Sept 15    | 6-8pm | Peter & Nick |
 | Welcome Reception                 | Tuesday, Sept 16   | 5-7pm | Peter & Nick |
@@ -85,8 +85,13 @@ format:
     -   GSK
 
         -   Becca Krouse
+        -   Ben Arancibia
 
     -   Sanofi
+
+    -   BMS
+
+        -   Clara Amorosi
 
     -   Abbvie
 
@@ -102,18 +107,20 @@ format:
 
     -   Wu Consulting
 
-    -   Appsilon - using teal & LLM to generate quick/simple Shiny apps
+    -   Appsilon
 
--   Posit Connect (Joe Roberts - rep)
+        -   using teal & LLM to generate quick/simple Shiny apps
 
-    -   Error: "Database is locked." - just keep trying to publish, not an error with code
+-   Posit Connect
 
-    -   Getting metrics from API - Regis made an app, but API data formatting changed
+    -   Joe Roberts (Posit Connect)
 
-### Major Takeaways
+        -   Error: "Database is locked." - just keep trying to publish, not an error with code
 
--   Placeholder
+        -   Getting metrics from API - Regis made an app, but API data formatting changed
 
--   Placeholder
+    -   Lulu Li (rep)
 
--   Placeholder
+    -   Suzanne Dunham
+
+    -   Katherine Malewski

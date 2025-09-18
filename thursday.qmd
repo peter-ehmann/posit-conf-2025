@@ -2,4 +2,115 @@
 title: "Thursday Notes"
 ---
 
-### Keynote (9am)
+### Keynote - Psychology of Tech
+
+  - **Presenter:** Dr. Cat Hicks
+
+  - Successful code is copied (social learning)
+  - Solutions are improved by the group (cultural ratcheting)
+  - Both tweaks and leaps
+  - Most leaps fail, but wins = big advancement
+
+#### Traps
+
+  1. Brittle productivity trap
+    - Only way to be productive is to "grind"
+    - Short term hard effort looks cool
+  2. Chilly climate trap
+    - coder should be cold-nonHuman
+  3. Lone genius trap
+    - responsibility lies with a gifted few
+
+#### Good Culture
+
+  1. Learning culture
+  2. Sense of agency
+  3. Self-efficacy & motivation
+  4. Sense of belonging
+  
+#### Cats Law
+
+  - The more a software team fixates on short term performance, the less they protect the foundation of learning and improcemnt
+  - "We have to deliver"
+  
+### Big Orgranizations
+
+#### Data-as-a-product: A framework for collaborative data wrangling
+
+ - **Clara Amorosi, Bristol Myers Squibb**
+ - creating a data product object (more work now for less headaches later)
+ - start with git, renv, pins, targets
+
+#### Ripples of Change with R: It’s more than just coding
+
+ - start with purpose (change in mindset before skills to learn R)
+ - collaborate (open source - hope that your code is copied and used in the future)
+ - learn by doing (projects that matter)
+ - celebrate incremental progress
+
+#### What R We Counting?
+
+  - **Ben Arancibia, Director Data Science - Scientific and Adoption Lead for Open Source, GSK**
+  - How is open-source adoption going? Simple question, hard to answer.
+  - git is hard, have empathy for the transition
+
+#### A tale of one organization: learning how to swim in the ocean of open source
+
+  - learning is emotional
+  - need management directive
+  - hands on practice - code along sessions and Git together
+  - use GenAI to learn
+  - learning makes work fun
+
+### ML and Statistical Modeling
+
+#### Building a Real-Time COVID-19 Surveillance System with R: Lessons from the COVID Symptom Study Sweden
+#### Breaking Barriers: Making Ecological Modelling Accessible with EcoCommons
+#### Precision Medicine for All: Using Tidymodels to Validate Breast Cancer PRS in Brazil
+#### Demystifying MLOps with Vetiver
+
+### Enterprise-Level Data Platforms
+
+#### Championing modern science workflows to benefit dairy farmers
+
+  - Excel to R transition
+  - Need persistence
+
+#### The Power of Snowflake and Posit Workbench: Macroeconomic Data Exploration in the Cloud
+
+  - Snowflake vs Dremio
+
+#### From Framework to Function: Integrating AI, Data Science Platforms, and Psychological Safety
+
+  - [Psychological Safety](https://amycedmondson.com/psychological-safety/)
+  - How can we improve as a team?
+  - Can you help me prepare for xxx?
+  - Journey
+    - Plan
+    - Design
+    - Develop
+    - Test
+    - Deploy
+    - Review
+    - Launch
+  - Journey
+    - empower experimentation ("a-ha moment")
+    - asking for help is never shamed
+  - Are you interested in team performace?
+
+#### From SDKs to Agents: Building with R and Python on Databricks
+  
+  - DataBricks
+  
+### Trustworthy Data Visualization
+
+  - trust
+  - reliance
+  - commitment
+  
+  - categorical on Y
+  - continuous on X
+  
+  - CONTEXT
+  - CONVENTION
+  - MEANING

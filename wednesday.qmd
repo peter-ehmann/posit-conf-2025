@@ -126,6 +126,8 @@ title: "Wednesday Notes"
 #### Simplify R Adoption
 
   - Instant Impact: Developing {docorator} to Simplify R Adoption for Teams
+  - Analogy: Home Renovation
+    - Open Source (qmd) allows to stay on top of latest trends and adopt them easily
 
 #### Expanding quarto capabilities
 

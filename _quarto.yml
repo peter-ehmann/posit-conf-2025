@@ -8,6 +8,8 @@ website:
     left:
       - text: Home
         href: index.qmd
+      - text: Key Takeaways
+        href: takeaways.qmd
       - text: R/Pharma Summit
         href: rPharma.qmd
       - text: Pharmaverse
